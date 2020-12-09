@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.kontakt-sticky-container {
+  width: 492px;
+  position: fixed;
+  top: 20%;
+  right: -450px;
+  height: auto;
+}
+
+.kontakt-sticky {
+  position: inherit;
+  display: flex;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  align-self: flex-start;
+  width: auto;
+  padding: 15px 0 40px 5px;
+  background-color: #595959;
+  color: white;
+}
