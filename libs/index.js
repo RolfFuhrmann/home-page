@@ -11,24 +11,24 @@ function ready(handler) {
   }
 }
 
-var _clickEvents = ["click", "touchstart"];
+const _clickEvents = ["click", "touchstart"];
 
 ready(function () {
   bulmaCollapsible.attach();
 
-  var burgers = document.querySelectorAll(".burger");
+  const burgers = document.querySelectorAll(".burger");
   [].forEach.call(burgers, function (burger) {
     _clickEvents.forEach(function (clickEvent) {
       burger.addEventListener(clickEvent, function (e) {
         e.preventDefault();
 
-        var node = e.currentTarget;
+        const node = e.currentTarget;
         if (node) {
           node.classList.toggle("is-active");
           // Get the target from the "data-target" attribute
-          var target = node.dataset.target;
+          const target = node.dataset.target;
           if (target) {
-            var targetNode = document.querySelector(node.dataset.target);
+            const targetNode = document.querySelector(node.dataset.target);
             if (targetNode) {
               targetNode.classList.toggle("is-active");
             }
@@ -38,10 +38,10 @@ ready(function () {
     });
   });
 
-  var menus = document.querySelectorAll(".menu");
+  const menus = document.querySelectorAll(".menu");
   [].forEach.call(menus, function (menu) {
     // Open menu which contains the current active item
-    var activeMenus = menu.querySelectorAll(
+    const activeMenus = menu.querySelectorAll(
       ".menu-item:not(.has-dropdown).is-active"
     );
     [].forEach.call(activeMenus, function (activeMenu) {
@@ -51,13 +51,13 @@ ready(function () {
       }
     });
 
-    var dropdownMenus = menu.querySelectorAll(
+    const dropdownMenus = menu.querySelectorAll(
       ".menu-item.has-dropdown > .menu-title"
     );
     [].forEach.call(dropdownMenus, function (dropdownMenu) {
       dropdownMenu.addEventListener("click", function (e) {
         e.preventDefault();
-        var currentMenu = e.currentTarget;
+        const currentMenu = e.currentTarget;
 
         // Toggle current menu
         currentMenu
@@ -65,7 +65,7 @@ ready(function () {
           .classList.toggle("is-active");
 
         // Close all other active menus
-        var otherActiveMenus = menu.querySelectorAll(
+        const otherActiveMenus = menu.querySelectorAll(
           ".menu-item.has-dropdown.is-active"
         );
         [].forEach.call(otherActiveMenus, function (otherActiveMenu) {
@@ -81,18 +81,18 @@ ready(function () {
     });
   });
 
-  var tabs = document.querySelectorAll(".tabs li a");
+  const tabs = document.querySelectorAll(".tabs li a");
   [].forEach.call(tabs, function (tab) {
     if (window.location.hash) {
-      var tabToShow = tab
+      const tabToShow = tab
         .closest(".tabs")
         .querySelector('[href="' + window.location.hash + '"]');
-      var tabContentToShow = document.querySelector(window.location.hash);
+      const tabContentToShow = document.querySelector(window.location.hash);
       if (tabToShow && tabContentToShow) {
-        var tabToHide = tab.closest(".tabs").querySelector("li.is-active");
+        const tabToHide = tab.closest(".tabs").querySelector("li.is-active");
         if (tabToHide) {
-          var tabToHideLink = tabToHide.querySelector("a");
-          var tabContentToHide = document.querySelector(
+          const tabToHideLink = tabToHide.querySelector("a");
+          const tabContentToHide = document.querySelector(
             tabToHideLink.getAttribute("href")
           );
           if (tabContentToHide) {
@@ -109,12 +109,12 @@ ready(function () {
     _clickEvents.forEach(function (clickEvent) {
       tab.addEventListener(clickEvent, function (event) {
         event.preventDefault();
-        var tab = event.currentTarget;
+        const tab = event.currentTarget;
 
-        var tabToHide = tab.closest(".tabs").querySelector("li.is-active");
+        const tabToHide = tab.closest(".tabs").querySelector("li.is-active");
         if (tabToHide) {
-          var _tabToHideLink = tabToHide.querySelector("a");
-          var _tabContentToHide = document.querySelector(
+          const _tabToHideLink = tabToHide.querySelector("a");
+          const _tabContentToHide = document.querySelector(
             _tabToHideLink.getAttribute("href")
           );
           if (_tabContentToHide) {
@@ -126,11 +126,19 @@ ready(function () {
         }
         tab.closest("li").classList.add("is-active");
 
-        var tabContentToShow = document.querySelector(tab.getAttribute("href"));
+        const tabContentToShow = document.querySelector(
+          tab.getAttribute("href")
+        );
         if (tabContentToShow) {
           tabContentToShow.classList.add("is-active");
         }
       });
     });
+  });
+
+  const anchors = document.querySelectorAll(".is-pulled-right");
+  [].forEach.call(anchors, function (anchors) {
+    console.log("Alle Links ", JSON.stringify(anchors));
+    console.log("Alle Links " + anchors);
   });
 });
