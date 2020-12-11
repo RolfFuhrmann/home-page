@@ -1,6 +1,10 @@
 <html lang=de>
     <head>
 
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <title>Rolf Fuhrmann Kompetenz in der Fullstack Webentwicklung</title>
         
         <link rel="stylesheet" type="text/css" href="libs/bulma-0.9.1/css/bulma.css">
@@ -10,39 +14,217 @@
         <script type="text/javascript" src="libs/bulma-collabsible/js/bulma-collapsible.min.js"></script>
         <script type="text/javascript" src="libs/index.js"></script>
 
-     </head>
-    <body>
+        <style>
+            .hero {
+            background: url(images/background.png) center / cover;
+            }
+        </style>
 
-        <nav class="section container is-fluid">
-            <div class="columns">
-                <div class="column is-three-fifths">
-                    <a href="index.htm"><img src="images/logo.gif" alt="Logo" width="80"/></a>
-                    <p class="title is-4">Rolf Fuhrmann</p>
-                </div>
-                <div class="column">
-                    <h1 class="title">
-                        hier kommt die navigation hin
-                        </h1>
+     </head>
+    <body class="has-navbar-fixed-top">
+
+        <!-- /.navbar -->
+        <nav class="navbar has-shadow is-white is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                <img src="images/logo.gif" alt="Logo" style="max-width: 28px">
+            </a>
+
+            <a role="button" class="navbar-burger has-text-black" id="burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navMenu" class="navbar-menu">
+            <div class="navbar-end ">
+            <a class="navbar-item">
+                <strong>Kompetenzen</strong>
+            </a>
+            <a class="navbar-item">
+                <strong>Portfolio</strong>
+            </a>
+            <a class="navbar-item">
+                <strong>Über Mich</strong>
+            </a>
+            <div class="navbar-item">
+                <div class="buttons">
+                <a class="button is-black">
+                    <strong>Kontakt</strong>
+                </a>
                 </div>
             </div>
+            </div>
+        </div>
         </nav>
+        <!-- /.navbar -->
 
-        <section class="section container is-fluid">
-            <div class="columns">
-                <div class="column is-three-fifths content is-large">
-                    <h2>Komptenz in der Fullstack Webentwicklung</h2>
-                    <p class="block">
+        <!-- /.hero Landing-->
+        <section class="hero is-fullheight-with-navbar">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-multiline">
+                    <div class="column is-12">
+                    <p class="subtitle py-5 has-text-black">
+                        Rolf Fuhrmann
+                    </p>
+                    </div>
+                    <div class="column is-12">
+                    <h1 class="title pt-1 is-family-monospace has-text-primary">
+                        Kompetenz in der</br>
+                        Fullstack Webentwicklung
+                    </h1>
+                    </div>
+                    <div class="column is-7">
+                    <p class="subtitle pt-2 has-text-black">
                         Meine Kernkompetenz ist die Entwicklung von Software für Frontend und Backend. Seit 2005 habe ich mein wissen und meine Erfahrung in vielen Projekten erfolgreich eingebracht. 
                         Dabei habe ich für die Anforderungen meiner Kunden immer kreative und gute Lösungen gefunden. Ein  besonderes Augenmerk habe ich auch auf die Softwarequalität gelegt. 
                         Zum Tagegeschäft gehört dabei auch der versierte Umgang mit den gängigen Tools die den Entwicklungsprozess und die Qualität unterstützen. 
                         Durch Neugier an den neuesten technischen Entwicklungen und ein hohes persönliches Engagement zur Weiterbildung bleibe ich auf der Höhe der Zeit.
-                    </p>
+                    </p> 
+                    </div>
+                </div>        
+            </div>
+        </div>
+        </section>
+        <!-- /.hero Landing-->
+
+
+        <!-- /.section Kompetenzen-->
+        <section class="section container mt-6">
+            <h1 class="title is-family-monospace has-text-primary">Kompetenzen</h1>
+            <div class="columns is-multiline">
+                
+                <div class="column is-half">
+                    <div class="box is-shadowless has-background-white-ter">
+                        <h2 class="title is-4 is-family-monospace">Frontend</h2>
+                        <article class="media">
+                            <div class="content">
+                                <p>Konzeption und Entwicklung von <strong>UI-Komponenten</strong> mit</p>
+                                    <ul>
+                                        <li><strong>Angular</strong></li>
+                                        <li id="collapsible-frontend-1" class="is-collapsible">JSF</li>
+                                        <li id="collapsible-frontend-1" class="is-collapsible">Struck</li>
+                                    </ul>
+                                <a href="#collapsible-frontend-1" data-action="collapse">Mehr anzeigen</a>
+                                </br>
+                                </br>
+                                <a class="has-text-primary" href="#collapsible-frontend-2" data-action="collapse"><strong>Tools & Technologien</strong>
+                                    <i class=" is-pulled-right ml-3 arrow down"></i>
+                                </a>
+                                <div id="collapsible-frontend-2" class="is-collapsible">
+                                    <div class="tags mt-2">
+                                        <span class="tag is-primary">Webstorm</span>
+                                        <span class="tag is-primary">Visual Code Studio</span>
+                                        <span class="tag is-primary">NodeJS</span>
+                                        <span class="tag is-primary">Typescript</span>
+                                        <span class="tag is-primary">RxJS</span>
+                                        <span class="tag is-primary">Jasmine/Karma</span>
+                                        <span class="tag is-primary">Protractor</span>
+                                        <span class="tag is-primary">JSON</span>
+                                        <span class="tag is-primary">HTML5</span>
+                                        <span class="tag is-primary">CSS3/Bootstrap</span>
+                                        <span class="tag is-primary">Git</span>
+                                        <span class="tag is-primary">Bitbucket</span>
+                                        <span class="tag is-primary">GitHub</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 </div>
-                <div class="column">
-                    <img src="images/work-together.jpg" alt="">
+
+                <div class="column is-half">
+                    <div class="box is-shadowless has-background-white-ter">
+                        <h2 class="title is-4 is-family-monospace">Backend</h2>
+                        <article class="media">
+                            <div class="content">
+                                <p>Konzeption und Entwicklung von <strong>Microservices</strong> mit</p>
+                                    <ul>
+                                        <li><strong>Springboot mit Java 2</strong></li>
+                                    </ul>
+                                <div id="collapsible-backend-1" class="is-collapsible">
+                                    <p>Konzeption & Entwicklung von <strong>serverseitigen Serviceschichten</strong></p>
+                                    <p>Konzeption & Entwicklung von <strong>Unittests & Integrationstests</strong></p>
+                                </div>
+                                <a href="#collapsible-backend-1" data-action="collapse">Mehr anzeigen</a>
+                                </br>
+                                </br>
+                                <a class="has-text-primary" href="#collapsible-backend-2" data-action="collapse"><strong>Tools & Technologien</strong>
+                                    <i class=" is-pulled-right ml-3 arrow down"></i>
+                                </a>
+                                <div id="collapsible-backend-2" class="is-collapsible">
+                                    <div class="tags mt-2">
+                                        <span class="tag is-primary">Eclipse</span>
+                                        <span class="tag is-primary">IntelliJ</span>
+                                        <span class="tag is-primary">RAD</span>
+                                        <span class="tag is-primary">Docker Container</span>
+                                        <span class="tag is-primary">Weblogic</span>
+                                        <span class="tag is-primary">Webspehere</span>
+                                        <span class="tag is-primary">Jboss</span>
+                                        <span class="tag is-primary">Tomcat</span>
+                                        <span class="tag is-primary">Java 11</span>
+                                        <span class="tag is-primary">RxJava</span>
+                                        <span class="tag is-primary">JEE (EJB, JPA, CDI, JAX-RS)</span>
+                                        <span class="tag is-primary">Maven</span>
+                                        <span class="tag is-primary">Git</span>
+                                        <span class="tag is-primary">Bitbucket</span>
+                                        <span class="tag is-primary">GitHub</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="column is-half">
+                    <div class="box is-shadowless has-background-white-ter">
+                        <h2 class="title is-4 is-family-monospace">DevOps</h2>
+                        <article class="media">
+                            <div class="content">
+                                <p><strong>Continious Integration</strong></p>
+                                <p><strong>Continious Delivery</strong></p>
+                                </br>
+                                <a class="has-text-primary" href="#collapsible-devops-2" data-action="collapse"><strong>Tools & Technologien</strong>
+                                    <i class=" is-pulled-right ml-3 arrow down"></i>
+                                </a>
+                                <div id="collapsible-devops-2" class="is-collapsible">
+                                    <div class="tags mt-2">
+                                        <span class="tag is-primary">Jenkins</span>
+                                        <span class="tag is-primary">Sonar</span>
+                                        <span class="tag is-primary">Nexus IQ</span>
+                                        <span class="tag is-primary">Docker</span>
+                                        <span class="tag is-primary">Mesos DC/OS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="column is-half">
+                    <div class="box is-shadowless has-background-white-ter">
+                        <h2 class="title is-4 is-family-monospace">Agilität</h2>
+                        <article class="media">
+                            <div class="content">
+                                <p>Aktive Teilnahme an <strong>Refinement, Planing und Retro der Sprints</strong></p>
+                                <p>Teamarbeit mit <strong>Pairprogramming und Codereview</strong></p>
+                                </br>
+                                <a class="has-text-primary" href="#collapsible-agility-2" data-action="collapse"><strong>Tools & Technologien</strong>
+                                    <i class=" is-pulled-right ml-3 arrow down"></i>
+                                </a>
+                                <div id="collapsible-agility-2" class="is-collapsible">
+                                    <div class="tags mt-2">
+                                        <span class="tag is-primary">Jira</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
                 </div>
         </section>
-        </section>
+        <!-- /.section Kompetenzen-->
 
 
         <section class="section container is-fluid">
