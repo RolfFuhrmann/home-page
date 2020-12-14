@@ -1,5 +1,29 @@
 @charset "UTF-8";
 
+.hero {
+  background-image: url("./../images/work-together-5.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.hero-body div.column {
+  background: linear-gradient(
+    to right,
+    rgba(80, 190, 190, 0.7) 0,
+    rgba(0, 153, 153, 0.7) 50%,
+    rgba(0, 153, 176, 0.7) 83%,
+    rgba(0, 153, 203, 0.7) 100%
+  );
+}
+
+.navbar-item img {
+  max-height: 6rem;
+}
+nav.navbar div.navbar-brand h1.navbar-item {
+  color: #7b7c7f;
+}
+
 .arrow {
   border: solid #363636;
   border-width: 0 2px 2px 0;
