@@ -79,3 +79,7 @@ nav.navbar div.navbar-brand h1.navbar-item {
 .content {
   width: 100%;
 }
+
+.box-height {
+  min-height: 330px;
+}
