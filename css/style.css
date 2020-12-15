@@ -71,3 +71,11 @@ nav.navbar div.navbar-brand h1.navbar-item {
   background-color: #595959;
   color: white;
 }
+
+.box {
+  min-width: auto;
+}
+
+.content {
+  width: 100%;
+}
