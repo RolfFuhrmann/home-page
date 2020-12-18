@@ -53,21 +53,37 @@ nav.navbar div.navbar-brand h1.navbar-item {
 }
 
 .kontakt-sticky-container {
-  width: 492px;
+  width: 300;
   position: fixed;
   top: 20%;
-  right: -450px;
+  right: -250px;
   height: auto;
+}
+
+.kontakt-sticky-container-active {
+  right: 0;
+}
+
+.sticky-content {
+  width: 300px;
 }
 
 .kontakt-sticky {
   position: inherit;
-  display: flex;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   align-self: flex-start;
   width: auto;
-  padding: 15px 0 40px 5px;
   background-color: #595959;
   color: white;
+  padding: 15px 0 40px 0;
+  line-height: 42.68px;
+  font-size: 18px;
+}
+
+.kontakt-sticky i {
+  margin-left: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
 }

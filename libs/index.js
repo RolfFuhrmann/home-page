@@ -180,16 +180,21 @@ ready(function () {
           childrenArrowElementOpen.classList.remove("up");
           childrenArrowElementOpen.classList.add("down");
         }
-        const textOpen = anchorEvent.getAttribute("text-open");
-        const textClosed = anchorEvent.getAttribute("text-closed");
-        const isActiveElement = anchorEvent.querySelector("a.is-active");
-        if (!isActiveElement && textClosed) {
-          anchorEvent.textContent = textClosed;
-        }
-        if (isActiveElement && textOpen) {
-          anchorEvent.textContent = textOpen;
-        }
       });
+    });
+  });
+
+  const collapsibleKontakt = document.querySelector(
+    "#collapsible-kontakt-info"
+  );
+  const kontakt = document.querySelector("#kontakt-info-sticky");
+  const kontaktInfoBox = document.querySelector("#kontakt-info-box");
+  _clickEvents.forEach(function (clickEvent) {
+    kontakt.addEventListener(clickEvent, function (event) {
+      event.preventDefault();
+      const anchorEvent = event.currentTarget;
+      collapsibleKontakt.classList.add("kontakt-sticky-container");
+      kontaktInfoBox.classList.add("kontakt-sticky-container-active");
     });
   });
 });
