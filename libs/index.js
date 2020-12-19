@@ -167,18 +167,18 @@ ready(function () {
         event.preventDefault();
         const anchorEvent = event.currentTarget;
         const childrenArrowElementClosed = anchorEvent.querySelector(
-          "i.arrow.down"
+          "i.mdi-chevron-down"
         );
         const childrenArrowElementOpen = anchorEvent.querySelector(
-          "i.arrow.up"
+          "i.mdi-chevron-up"
         );
         if (childrenArrowElementClosed) {
-          childrenArrowElementClosed.classList.remove("down");
-          childrenArrowElementClosed.classList.add("up");
+          childrenArrowElementClosed.classList.remove("mdi-chevron-down");
+          childrenArrowElementClosed.classList.add("mdi-chevron-up");
         }
         if (childrenArrowElementOpen) {
-          childrenArrowElementOpen.classList.remove("up");
-          childrenArrowElementOpen.classList.add("down");
+          childrenArrowElementOpen.classList.remove("mdi-chevron-up");
+          childrenArrowElementOpen.classList.add("mdi-chevron-down");
         }
       });
     });
