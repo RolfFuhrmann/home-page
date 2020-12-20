@@ -40,6 +40,7 @@ const _clickEvents = ["click", "touchstart"];
 ready(function () {
   bulmaCollapsible.attach();
 
+  /*
   const burgers = document.querySelectorAll(".burger");
   [].forEach.call(burgers, function (burger) {
     _clickEvents.forEach(function (clickEvent) {
@@ -159,7 +160,7 @@ ready(function () {
       });
     });
   });
-
+  */
   const anchors = document.querySelectorAll("a[data-action]");
   [].forEach.call(anchors, function (anchor) {
     _clickEvents.forEach(function (clickEvent) {
