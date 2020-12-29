@@ -39,7 +39,6 @@ const _clickEvents = ["click", "touchstart"];
 
 ready(function () {
   bulmaCollapsible.attach();
-
   /*
   const burgers = document.querySelectorAll(".burger");
   [].forEach.call(burgers, function (burger) {
@@ -160,12 +159,11 @@ ready(function () {
       });
     });
   });
-  */
+*/
   const anchors = document.querySelectorAll("a[data-action]");
   [].forEach.call(anchors, function (anchor) {
     _clickEvents.forEach(function (clickEvent) {
       anchor.addEventListener(clickEvent, function (event) {
-        event.preventDefault();
         const anchorEvent = event.currentTarget;
         const childrenArrowElementClosed = anchorEvent.querySelector(
           "i.mdi-chevron-down"
