@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-$primary: rgb(21, 120, 70);
+$primary: rgb(31, 125, 94);
 
 .hero {
   background-image: url("./../images/work-together-5.jpg");
@@ -35,6 +35,16 @@ $primary: rgb(21, 120, 70);
 
 .navbar-item img {
   max-height: 6rem !important;
+}
+
+@media screen and (max-width: 768px) {
+  article .img {
+    width: 50%;
+  }
+}
+
+article .img {
+  width: 100%;
 }
 
 .kontakt-sticky-container {
