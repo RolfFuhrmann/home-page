@@ -47,6 +47,14 @@ article .img {
   width: 100%;
 }
 
+.fixed-button-bar {
+  position: fixed !important;
+  right: 0;
+  left: 0;
+  bottom: 12px;
+  z-index: 105;
+}
+
 .kontakt-sticky-container {
   width: 300;
   position: fixed;
