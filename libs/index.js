@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+let _clickEvents = ["click", "touchstart"];
+
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction();
@@ -54,8 +56,6 @@ function ready(handler) {
     document.addEventListener("DOMContentLoaded", handler, false);
   }
 }
-
-const _clickEvents = ["click", "touchstart"];
 
 ready(function () {
   bulmaCollapsible.attach();
@@ -183,23 +183,27 @@ ready(function () {
   const anchors = document.querySelectorAll("a[data-action]");
   [].forEach.call(anchors, function (anchor) {
     _clickEvents.forEach(function (clickEvent) {
-      anchor.addEventListener(clickEvent, function (event) {
-        const anchorEvent = event.currentTarget;
-        const childrenArrowElementClosed = anchorEvent.querySelector(
-          "i.mdi-chevron-down"
-        );
-        const childrenArrowElementOpen = anchorEvent.querySelector(
-          "i.mdi-chevron-up"
-        );
-        if (childrenArrowElementClosed) {
-          childrenArrowElementClosed.classList.remove("mdi-chevron-down");
-          childrenArrowElementClosed.classList.add("mdi-chevron-up");
-        }
-        if (childrenArrowElementOpen) {
-          childrenArrowElementOpen.classList.remove("mdi-chevron-up");
-          childrenArrowElementOpen.classList.add("mdi-chevron-down");
-        }
-      });
+      anchor.addEventListener(
+        clickEvent,
+        function (event) {
+          const anchorEvent = event.currentTarget;
+          const childrenArrowElementClosed = anchorEvent.querySelector(
+            "i.mdi-chevron-down"
+          );
+          const childrenArrowElementOpen = anchorEvent.querySelector(
+            "i.mdi-chevron-up"
+          );
+          if (childrenArrowElementClosed) {
+            childrenArrowElementClosed.classList.remove("mdi-chevron-down");
+            childrenArrowElementClosed.classList.add("mdi-chevron-up");
+          }
+          if (childrenArrowElementOpen) {
+            childrenArrowElementOpen.classList.remove("mdi-chevron-up");
+            childrenArrowElementOpen.classList.add("mdi-chevron-down");
+          }
+        },
+        { passive: true }
+      );
     });
   });
 });

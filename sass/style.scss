@@ -2,8 +2,14 @@
 
 $primary: rgb(31, 125, 94);
 
+p {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 .hero {
-  background-image: url("./../images/work-together-5.jpg");
+  background-image: url("./../images/work-together-5.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -53,42 +59,6 @@ article .img {
   left: 0;
   bottom: 12px;
   z-index: 105;
-}
-
-.kontakt-sticky-container {
-  width: 300;
-  position: fixed;
-  top: 20%;
-  right: -250px;
-  height: auto;
-}
-
-.kontakt-sticky-container-active {
-  right: 0;
-}
-
-.sticky-content {
-  width: 300px;
-}
-
-.kontakt-sticky {
-  position: inherit;
-  writing-mode: vertical-lr;
-  transform: rotate(180deg);
-  align-self: flex-start;
-  width: auto;
-  background-color: #595959;
-  color: white;
-  padding: 15px 0 40px 0;
-  line-height: 42.68px;
-  font-size: 18px;
-}
-
-.kontakt-sticky i {
-  margin-left: 0;
-  position: absolute;
-  bottom: 10px;
-  left: 12px;
 }
 
 @import "../libs/bulma-0.9.1/bulma.sass";

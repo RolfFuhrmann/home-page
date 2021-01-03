@@ -1,0 +1,21 @@
+{
+    "lang": "de-DE",
+    "name": "Rolf Fuhrmann",
+    "short_name": "Rolf Fuhrmann",
+	"icons": [
+		{
+			"src": "icons/logo-196.png",
+			"sizes": "196x196",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "icons/logo-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"background_color": "white",
+	"theme_color": "#ffffff",
+	"display": "standalone"
+}
