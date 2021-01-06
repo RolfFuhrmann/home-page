@@ -54,10 +54,10 @@
                     <a class="navbar-item" href="#ueber-mich">
                         <strong>Über Mich</strong>
                     </a>
-                    <a class="navbar-item" href="#kontakt">
+                    <a class="navbar-item is-hidden-tablet" href="#kontakt">
                         <strong>Kontakt</strong>
                     </a>
-                    <a class="navbar-item" href="#info">
+                    <a class="navbar-item is-hidden-tablet" href="#info">
                         <strong>Info</strong>
                     </a>
                 </div>
@@ -916,11 +916,56 @@
             </div>
         </div>
 
+        <div class="is-hidden-mobile fixed-side-bar">
+            <div class="is-pulled-right">
+                <div id="kontaktButton" class="side-bar-icon open">
+                    <span class="icon is-medium" style="display: contents;">
+                        <i class="mdi mdi-36px mdi-contacts-outline has-text-primary">Kontakt</i>
+                    </span>
+                </div>
+                <div id="infoButton" class="side-bar-icon open">
+                    <span class="icon is-medium" style="display: contents;">
+                        <i class="mdi mdi-36px mdi-information-outline has-text-primary">Info</i>
+                    </span>
+                </div>
+            </div>
+            <div id="kontaktContent" class="side-bar-content is-family-monospace active is-hidden">
+                <div class="box content">
+                    <h2 class="title is-4 is-centered has-text-primary">Kontakt</h2>
+                    <address>
+                        Rolf Fuhrmann
+                        <br/>
+                        Kutzerstr. 105c
+                        <br/><br/>
+                        90765 Fürth
+                    </address>
+                    <br>
+                    <div>
+                        <span class="icon"><i class="mdi mdi-phone mdi-dark"></i></span>&nbsp;+49.911.89295634
+                        <br/>
+                        <span class="icon"><i class="mdi mdi-fax mdi-dark"></i></span>&nbsp;+49.911.38445168
+                        <br/>
+                        <span class="icon"><i class="mdi mdi-cellphone-android mdi-dark"></i></span>&nbsp;+49.179.5032935
+                        <br/>
+                        <span class="icon"><i class="mdi mdi-email mdi-dark"></i></span>&nbsp;<img src="images/mail.jpg" width="163" height="14" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div id="infoContent" class="side-bar-content is-family-monospace active is-hidden">
+                <div class="box content">
+                    <h2 class="title is-4 is-centered has-text-primary">Verfügbarkeit</h2>
+                    <p>Frei für neue Projekte ab 1. Mai 2021</p>
+                </div>
+
+            </div>
+        </div>
+
         <link rel="stylesheet" type="text/css" href="libs/materialdesign-webfont-master/css/materialdesignicons.min.css">
         <link rel="stylesheet" type="text/css" href="libs/bulma-collabsible/css/bulma-collapsible.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style-1.0.0/style.min.css">
 
         <script type="text/javascript" src="libs/bulma-collabsible/js/bulma-collapsible.min.js"></script>
-        <script type="text/javascript" src="libs/index.js"></script>
+        <script type="text/javascript" src="libs/script-1.0.0/index.js"></script>
     </body>
 </html>

@@ -9,7 +9,7 @@ p {
 }
 
 .hero {
-  background-image: url("./../images/work-together-5.webp");
+  background-image: url("./../../images/work-together-5.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -59,6 +59,65 @@ article .img {
   left: 0;
   bottom: 12px;
   z-index: 105;
+}
+
+.fixed-side-bar {
+  position: fixed !important;
+  right: 0;
+  top: 160px;
+  z-index: 101;
+}
+.side-bar-icon {
+  -webkit-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  margin-bottom: 3px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: white;
+  font-size: 12px;
+  line-height: 1.1;
+}
+
+.side-bar-icon.open {
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.side-bar-content {
+  max-height: 70vh;
+  left: -2px;
+  top: 0;
+  transform: translateX(-100%) scaleX(0);
+  -webkit-transform: translateX(-100%) scaleX(0);
+  -o-transform: translateX(-100%) scaleX(0);
+  -webkit-transition: -webkit-transform 500ms ease-out;
+  -moz-transition: -moz-transform 500ms ease-out;
+  -o-transition: -o-transform 500ms ease-out;
+  transition: transform 500ms ease-out;
+  transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  -webkit-transform-origin: 100% 0;
+  max-height: 100vh;
+  background-color: #fff;
+  width: 400px;
+  position: absolute;
+  color: #4c4c4c;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 30;
+}
+
+.side-bar-content.active {
+  transform: translateX(-100%) scaleX(1);
+  -webkit-transform: translateX(-100%) scaleX(1);
+  -o-transform: translateX(-100%) scaleX(1);
 }
 
 @import "../libs/bulma-0.9.1/bulma.sass";

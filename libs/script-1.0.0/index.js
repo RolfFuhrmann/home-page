@@ -26,26 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let _clickEvents = ["click", "touchstart"];
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  const scrollToTopbutton = document.getElementById("scrollToTop");
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollToTopbutton.style.display = "block";
-  } else {
-    scrollToTopbutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function scrollToTop() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
 function ready(handler) {
   if (
     /complete|loaded|interactive/.test(document.readyState) &&
@@ -55,6 +35,12 @@ function ready(handler) {
   } else {
     document.addEventListener("DOMContentLoaded", handler, false);
   }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function scrollToTop() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
 ready(function () {
@@ -205,5 +191,46 @@ ready(function () {
         { passive: true }
       );
     });
+  });
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    const scrollToTopbutton = document.getElementById("scrollToTop");
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      scrollToTopbutton.style.display = "block";
+    } else {
+      scrollToTopbutton.style.display = "none";
+    }
+  }
+
+  const kontaktButton = document.getElementById("kontaktButton");
+  const kontaktContent = document.getElementById("kontaktContent");
+  kontaktButton.addEventListener(_clickEvents[0], function () {
+    const kontaktContentHidden = kontaktContent.classList.contains("is-hidden");
+    if (kontaktContentHidden) {
+      infoContent.classList.add("is-hidden");
+      kontaktContent.classList.remove("is-hidden");
+    } else {
+      kontaktContent.classList.add("is-hidden");
+    }
+  });
+
+  const infoButton = document.getElementById("infoButton");
+  const infoContent = document.getElementById("infoContent");
+  infoButton.addEventListener(_clickEvents[0], function () {
+    const infoContentHidden = infoContent.classList.contains("is-hidden");
+    if (infoContentHidden) {
+      kontaktContent.classList.add("is-hidden");
+      infoContent.classList.remove("is-hidden");
+    } else {
+      infoContent.classList.add("is-hidden");
+    }
   });
 });
