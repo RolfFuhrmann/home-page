@@ -27,7 +27,7 @@
     <body>
 
         <!-- /.navbar -->
-        <nav id="mainbar" class="navbar is-family-monospace" aria-label="main navigation">
+        <nav id="mainbar" class="navbar is-family-monospace" aria-label="navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="index.html">
                   <img src="images/logo.gif" alt="Logo der Website" width="60" height="60">
@@ -66,7 +66,7 @@
         <!-- /.navbar -->
 
         <!-- /.hero Landing-->
-       <section class="hero is-family-monospace">
+       <section class="hero is-family-monospace" role="main" aria-label="main">
             <div class="hero-body">
                 <div class="container">
                     <div class="columns">
@@ -89,7 +89,7 @@
         <!-- /.hero Landing-->
 
         <!-- /.section Kompetenzen-->
-        <section id="kompetenzen" class="section container is-fluid mt-6">
+        <section id="kompetenzen" class="section container is-fluid mt-6" aria-label="Kompetenzen">
             <h2 class="title is-family-monospace has-text-primary">Kompetenzen</h2>
             <div class="tile is-ancestor content">
 
@@ -182,7 +182,7 @@
                 <div class="tile is-parent">
                     <article class="tile is-child box is-shadowless has-background-white-ter">
                         <h2 class="title is-4 is-family-monospace">Agilität</h2>
-                            <p>Aktive Mitarbeit an <strong>Refinement, Planing und Retro der Sprints</strong> der Sprints</p>
+                            <p>Aktive Mitarbeit an <strong>Refinement, Planing und Retro</strong> der Sprints</p>
                             <p>Teamarbeit mit <strong>Pair Programming und Codereview</strong></p>
 
                             <a  class="has-text-primary is-flex is-justify-content-space-between" href="#agility" data-action="collapse"><strong>Tools & Technologien</strong>
@@ -200,7 +200,7 @@
         <!-- /.section Kompetenzen-->
 
         <!-- /.section Portfolio-->
-        <section class="section container is-fluid" id="portfolio">
+        <section class="section container is-fluid" id="portfolio" aria-label="Portfolio">
             <h2 class="title is-family-monospace has-text-primary">Portfolio</h2>
             <div class="box is-shadowless has-background-white-ter content">   
                 <div class="columns portfolio">
@@ -808,13 +808,13 @@
         <!-- /.section Portfolio-->
 
         <!-- /.section Über Mich-->
-        <section class="section container is-fluid" id="ueber-mich">
+        <section class="section container is-fluid" id="ueber-mich" aria-label="Über mich">
             <h2 class="title is-family-monospace has-text-primary">Über Mich</h2>
                 <article class="content is-size-5">
                         <img class="is-pulled-right ml-4 is-size-5-mobile" src="images/rolf-fuhrmann.webp"  width="210" height="279" alt="Bild von Rolf Fuhrmann">
 
                             <p>Seit meinem Informatikstudium 1986 an der Akademie für Datenverarbeitung sammele ich kontinuierlich branchenübergreifende 
-                                Erfahrungen in der Softwareentwicklung, Anwendungsbetreuung und der Systemadministration bei IT-Dienstleister, Industrie, Banken, 
+                                Erfahrungen in der Softwareentwicklung, Anwendungsbetreuung und der Systemadministration für IT-Dienstleister, Industrie, Banken, 
                                 Druckerei / Verlagswesen, Nahrungsmittel, Versandhandel und Automotive.</p>
                          
                             <p>Dabei unterstütze ich meine Kunden kompetent in allen Stufen des Softwareentwicklungsprozesses. Durch enge
@@ -835,7 +835,7 @@
         <!-- /.section Über Mich-->
 
         <!-- /.section Kontakt--> 
-        <section class="section container is-fluid" id="kontakt">
+        <section class="section container is-fluid is-hidden-tablet" id="kontakt" aria-label="Kontaktinformnationen">
  
                 <h2 class="title is-family-monospace has-text-primary">Kontakt</h2>
                 <div class="tile is-ancestor is-size-5">
@@ -865,7 +865,7 @@
         <!-- /.section Kontakt-->
 
         <!-- /.section Info--> 
-        <section class="section container is-fluid" id="info">
+        <section class="section container is-fluid is-hidden-tablet" id="info" aria-label="Allgemeine Informationen">
             <div>
                 <h2 class="title is-family-monospace has-text-primary">Info</h2>
                 <p class="is-size-5">Frei für neue Projekt ab 1. Mai 2021</p>
@@ -892,18 +892,14 @@
 
 
                 </div>
-                <div class="level-item has-text-centered">
-                    <p>Zuletzt aktualisiert am 24.12.2020</p>
-
-                </div>
             </div>
  
         </footer>
 
-        <div id="scrollToTop" class="container fixed-button-bar" style="display: none;">
+        <div id="scrollToTop" class="container fixed-button-bar" style="display: none;" role="navigation" aria-label="Nach oben springen">
             <div class="content">
                 <div class="is-hidden-mobile buttons is-pulled-right">
-                   <button class="button has-text-primary" style="border-color: #1f7d5e;" onclick="scrollToTop()" >
+                   <button class="button has-text-primary" style="border-color: #1f7d5e;" onclick="scrollToTop()" title="Nach oben springen" >
                         <strong>nach oben</strong>
                         <span class="icon is-medium"><i class="mdi mdi-36px mdi-chevron-up has-text-primary"></i></span>
                     </button>
@@ -916,7 +912,7 @@
             </div>
         </div>
 
-        <div class="is-hidden-mobile fixed-side-bar">
+        <div class="is-hidden-mobile fixed-side-bar" role="navigation" aria-label="Informationsbuttons">
             <div class="is-pulled-right">
                 <div id="kontaktButton" class="side-bar-icon open">
                     <span class="icon is-medium" style="display: contents;">
