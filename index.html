@@ -10,8 +10,7 @@
 
     <meta name="theme-color" content="#ffffff">
 
-    <meta name="google-site-verification"
-        content="JmSr84gm9fyyXv4vc66z4193tmQSkEerLudTe9w26kQ">
+    <meta name="google-site-verification" content="JmSr84gm9fyyXv4vc66z4193tmQSkEerLudTe9w26kQ">
 
     <meta name="author" content="Rolf Fuhrmann">
 
@@ -77,13 +76,15 @@
     <!-- /.navbar -->
 
     <!-- /.hero Landing-->
-    <section class="hero is-family-monospace" role="main" aria-label="main">
+    <!-- data-theme="dark" sorgt dafür, dass Bulma v1.x diesen Bereich intern als 'Dunkel' behandelt -->
+    <section class="hero is-family-monospace" data-theme="dark" role="main" aria-label="main">
         <div class="hero-body">
             <div class="container">
                 <div class="columns">
                     <div class="column is-three-fifths content mt-6">
+                        <!-- Durch das obere data-theme bleiben title und Text hier garantiert weiß -->
                         <h1 class="title has-text-white is-size-2-tablet">
-                            Kompetenz in der</br>
+                            Kompetenz in der<br>
                             Fullstack Webentwicklung
                         </h1>
                         <p class="has-text-white is-size-5-tablet">
@@ -100,127 +101,157 @@
             </div>
         </div>
     </section>
+
     <!-- /.hero Landing-->
 
     <!-- /.section Kompetenzen-->
     <section id="kompetenzen" class="section container is-fluid mt-6" aria-label="Kompetenzen">
         <h2 class="title is-family-monospace has-text-primary">Kompetenzen</h2>
-        <div class="tile is-ancestor content">
 
-            <div class="tile is-parent is-vertical">
-                <article class="tile is-child box is-shadowless has-background-white-ter">
-                    <h2 class="title is-4 is-family-monospace">Frontend</h2>
-                    <p>Konzeption und Entwicklung von <strong>UI-Komponenten </strong>mit <strong>Angular 16, Stencil,
-                            JSF, Wicket, Struts</strong></p>
-                    <p>Konzeption und Entwicklung von <strong>Unittests</strong></p>
-                    <p>Konzeption und Entwicklung von <strong>E2E-Tests</strong></p>
-                    <a class="has-text-primary is-flex is-justify-content-space-between" href="#frontend"
-                        data-action="collapse"><strong>Tools & Technologien</strong>
-                        <span class="is-pulled-right icon is-medium"><i
-                                class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
-                    </a>
-                    <div id="frontend" class="is-collapsible">
-                        <div class="tags mt-2">
-                            <span class="tag is-primary">IntelliJ/Webstorm</span>
-                            <span class="tag is-primary">Visual Code Studio</span>
-                            <span class="tag is-primary">Node.js</span>
-                            <span class="tag is-primary">Typescript</span>
-                            <span class="tag is-primary">RxJS</span>
-                            <span class="tag is-primary">Jasmine/Karma/Jest</span>
-                            <span class="tag is-primary">Protractor</span>
-                            <span class="tag is-primary">JSON</span>
-                            <span class="tag is-primary">HTML5</span>
-                            <span class="tag is-primary">CSS3/Bootstrap/TailwindCSS/Angular Material</span>
-                            <span class="tag is-primary">Git</span>
-                            <span class="tag is-primary">GitLab</span>
-                            <span class="tag is-primary">Bitbucket</span>
-                        </div>
+        <!-- Das verlässliche Columns-System mit Multiline-Support -->
+        <div class="columns is-multiline content">
+
+            <!-- Kachel 1: Frontend (is-12 auf Tablet/Mobile, is-6 erst ab Desktop) -->
+            <div class="column is-12-tablet is-6-desktop is-flex">
+                <article
+                    class="box is-shadowless has-background-white-ter is-flex is-flex-direction-column is-justify-content-space-between w-100">
+                    <div>
+                        <h2 class="title is-4 is-family-monospace">Frontend</h2>
+                        <p>Konzeption und Entwicklung von <strong>UI-Komponenten </strong>mit <strong>Angular 16,
+                                Stencil, JSF, Wicket, Struts</strong></p>
+                        <p>Konzeption und Entwicklung von <strong>Unittests</strong></p>
+                        <p>Konzeption und Entwicklung von <strong>E2E-Tests</strong></p>
                     </div>
-                </article>
-            </div>
-            <div class="tile is-parent is-vertical">
-                <article class="tile is-child box is-shadowless has-background-white-ter">
-                    <h2 class="title is-4 is-family-monospace">Backend</h2>
-                    <p>Konzeption und Entwicklung von <strong>Microservices</strong> mit<strong>Springboot 3, Java
-                            17</strong></p>
-                    <p>Konzeption & Entwicklung von <strong>Serviceschichten</strong></p>
-                    <p>Konzeption & Entwicklung von <strong>Unittests & Integrationstests</strong></p>
-                    <a class="has-text-primary is-flex is-justify-content-space-between" href="#backend"
-                        data-action="collapse"><strong>Tools & Technologien</strong>
-                        <span class="is-pulled-right icon is-medium"><i
-                                class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
-                    </a>
-
-                    <div id="backend" class="is-collapsible">
-                        <div class="tags mt-2">
-                            <span class="tag is-primary">Eclipse</span>
-                            <span class="tag is-primary">IntelliJ</span>
-                            <span class="tag is-primary">RAD</span>
-                            <span class="tag is-primary">Docker Container</span>
-                            <span class="tag is-primary">Weblogic</span>
-                            <span class="tag is-primary">Webspehere</span>
-                            <span class="tag is-primary">Jboss</span>
-                            <span class="tag is-primary">Tomcat</span>
-                            <span class="tag is-primary">Java 17</span>
-                            <span class="tag is-primary">RxJava</span>
-                            <span class="tag is-primary">JEE (EJB, JPA, CDI, JAX-RS)</span>
-                            <span class="tag is-primary">Kafka</span>
-                            <span class="tag is-primary">Cassandra</span>
-                            <span class="tag is-primary">SQL</span>
-                            <span class="tag is-primary">Maven</span>
-                            <span class="tag is-primary">Git</span>
-                            <span class="tag is-primary">Bitbucket</span>
+                    <div>
+                        <a class="has-text-primary is-flex is-justify-content-space-between mt-4" href="#frontend"
+                            data-action="collapse">
+                            <strong>Tools & Technologien</strong>
+                            <span class="icon is-medium"><i
+                                    class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
+                        </a>
+                        <div id="frontend" class="is-collapsible">
+                            <div class="tags mt-2">
+                                <span class="tag is-primary">IntelliJ/Webstorm</span>
+                                <span class="tag is-primary">Visual Code Studio</span>
+                                <span class="tag is-primary">Node.js</span>
+                                <span class="tag is-primary">Typescript</span>
+                                <span class="tag is-primary">RxJS</span>
+                                <span class="tag is-primary">Jasmine/Karma/Jest</span>
+                                <span class="tag is-primary">Protractor</span>
+                                <span class="tag is-primary">JSON</span>
+                                <span class="tag is-primary">HTML5</span>
+                                <span class="tag is-primary">CSS3/Bootstrap/TailwindCSS/Angular Material</span>
+                                <span class="tag is-primary">Git</span>
+                                <span class="tag is-primary">GitLab</span>
+                                <span class="tag is-primary">Bitbucket</span>
+                            </div>
                         </div>
                     </div>
                 </article>
             </div>
 
-        </div>
-
-        <div class="tile is-ancestor content">
-            <div class="tile is-parent">
-                <article class="tile is-child box is-shadowless has-background-white-ter">
-                    <h2 class="title is-4 is-family-monospace">DevOps</h2>
-                    <p><strong>Continious Integration</strong></p>
-                    <p><strong>Continious Delivery</strong></p>
-                    <a class="has-text-primary is-flex is-justify-content-space-between" href="#devops"
-                        data-action="collapse"><strong>Tools & Technologien</strong>
-                        <span class="is-pulled-right icon is-medium"><i
-                                class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
-                    </a>
-                    <div id="devops" class="is-collapsible">
-                        <div class="tags mt-2">
-                            <span class="tag is-primary">Jenkins</span>
-                            <span class="tag is-primary">Sonar</span>
-                            <span class="tag is-primary">Nexus IQ</span>
-                            <span class="tag is-primary">Docker</span>
-                            <span class="tag is-primary">Mesos DC/OS</span>
-                            <span class="tag is-primary">Cloud Foundry</span>
+            <!-- Kachel 2: Backend -->
+            <div class="column is-12-tablet is-6-desktop is-flex">
+                <article
+                    class="box is-shadowless has-background-white-ter is-flex is-flex-direction-column is-justify-content-space-between w-100">
+                    <div>
+                        <h2 class="title is-4 is-family-monospace">Backend</h2>
+                        <p>Konzeption und Entwicklung von <strong>Microservices</strong> mit <strong>Springboot 3, Java
+                                17</strong></p>
+                        <p>Konzeption & Entwicklung von <strong>Serviceschichten</strong></p>
+                        <p>Konzeption & Entwicklung von <strong>Unittests & Integrationstests</strong></p>
+                    </div>
+                    <div>
+                        <a class="has-text-primary is-flex is-justify-content-space-between mt-4" href="#backend"
+                            data-action="collapse">
+                            <strong>Tools & Technologien</strong>
+                            <span class="icon is-medium"><i
+                                    class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
+                        </a>
+                        <div id="backend" class="is-collapsible">
+                            <div class="tags mt-2">
+                                <span class="tag is-primary">Eclipse</span>
+                                <span class="tag is-primary">IntelliJ</span>
+                                <span class="tag is-primary">RAD</span>
+                                <span class="tag is-primary">Docker Container</span>
+                                <span class="tag is-primary">Weblogic</span>
+                                <span class="tag is-primary">Webspehere</span>
+                                <span class="tag is-primary">Jboss</span>
+                                <span class="tag is-primary">Tomcat</span>
+                                <span class="tag is-primary">Java 17</span>
+                                <span class="tag is-primary">RxJava</span>
+                                <span class="tag is-primary">JEE (EJB, JPA, CDI, JAX-RS)</span>
+                                <span class="tag is-primary">Kafka</span>
+                                <span class="tag is-primary">Cassandra</span>
+                                <span class="tag is-primary">SQL</span>
+                                <span class="tag is-primary">Maven</span>
+                                <span class="tag is-primary">Git</span>
+                                <span class="tag is-primary">Bitbucket</span>
+                            </div>
                         </div>
                     </div>
                 </article>
             </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box is-shadowless has-background-white-ter">
-                    <h2 class="title is-4 is-family-monospace">Agilität</h2>
-                    <p>Aktive Mitarbeit an <strong>Refinement, Planing und Retro</strong> der Sprints</p>
-                    <p>Teamarbeit mit <strong>Pair Programming und Codereview</strong></p>
 
-                    <a class="has-text-primary is-flex is-justify-content-space-between" href="#agility"
-                        data-action="collapse"><strong>Tools & Technologien</strong>
-                        <span class="is-pulled-right icon is-medium"><i
-                                class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
-                    </a>
-                    <div id="agility" class="is-collapsible">
-                        <div class="tags mt-2">
-                            <span class="tag is-primary">Jira</span>
-                            <span class="tag is-primary">GitLab</span>
+            <!-- Kachel 3: DevOps -->
+            <div class="column is-12-tablet is-6-desktop is-flex">
+                <article
+                    class="box is-shadowless has-background-white-ter is-flex is-flex-direction-column is-justify-content-space-between w-100">
+                    <div>
+                        <h2 class="title is-4 is-family-monospace">DevOps</h2>
+                        <p><strong>Continious Integration</strong></p>
+                        <p><strong>Continious Delivery</strong></p>
+                    </div>
+                    <div>
+                        <a class="has-text-primary is-flex is-justify-content-space-between mt-4" href="#devops"
+                            data-action="collapse">
+                            <strong>Tools & Technologien</strong>
+                            <span class="icon is-medium"><i
+                                    class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
+                        </a>
+                        <div id="devops" class="is-collapsible">
+                            <div class="tags mt-2">
+                                <span class="tag is-primary">Jenkins</span>
+                                <span class="tag is-primary">Sonar</span>
+                                <span class="tag is-primary">Nexus IQ</span>
+                                <span class="tag is-primary">Docker</span>
+                                <span class="tag is-primary">Mesos DC/OS</span>
+                                <span class="tag is-primary">Cloud Foundry</span>
+                            </div>
                         </div>
                     </div>
                 </article>
             </div>
+
+            <!-- Kachel 4: Agilität -->
+            <div class="column is-12-tablet is-6-desktop is-flex">
+                <article
+                    class="box is-shadowless has-background-white-ter is-flex is-flex-direction-column is-justify-content-space-between w-100">
+                    <div>
+                        <h2 class="title is-4 is-family-monospace">Agilität</h2>
+                        <p>Aktive Mitarbeit an <strong>Refinement, Planing und Retro</strong> der Sprints</p>
+                        <p>Teamarbeit mit <strong>Pair Programming und Codereview</strong></p>
+                    </div>
+                    <div>
+                        <a class="has-text-primary is-flex is-justify-content-space-between mt-4" href="#agility"
+                            data-action="collapse">
+                            <strong>Tools & Technologien</strong>
+                            <span class="icon is-medium"><i
+                                    class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
+                        </a>
+                        <div id="agility" class="is-collapsible">
+                            <div class="tags mt-2">
+                                <span class="tag is-primary">Jira</span>
+                                <span class="tag is-primary">GitLab</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
         </div>
     </section>
+
     <!-- /.section Kompetenzen-->
 
     <!-- /.section Portfolio-->
