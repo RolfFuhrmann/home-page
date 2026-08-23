@@ -1,30 +1,63 @@
 RewriteEngine On
+
+# HTTP -> HTTPS
 RewriteCond %{SERVER_PORT} !=443
 RewriteRule ^(.*)$ https://rolf-fuhrmann.de/$1 [R=301,L]
 
+
+# ============================================================
+# Caching
+# ============================================================
+
 ExpiresActive On
+
+# Bilder: lange Cache-Dauer
 ExpiresByType image/jpg "access plus 1 year"
 ExpiresByType image/jpeg "access plus 1 year"
 ExpiresByType image/gif "access plus 1 year"
 ExpiresByType image/png "access plus 1 year"
 ExpiresByType image/webp "access plus 1 year"
-ExpiresByType text/css "access plus 1 month"
+
+# CSS / JavaScript
+# Die Dateien sind über Versionsverzeichnisse versioniert.
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType text/javascript "access plus 1 year"
+ExpiresByType text/x-javascript "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+
+# PDF
 ExpiresByType application/pdf "access plus 1 month"
-ExpiresByType text/javascript "access plus 1 month"
-ExpiresByType text/x-javascript "access plus 1 month"
-ExpiresByType application/x-shockwave-flash "access plus 1 month"
+
+# Favicons
 ExpiresByType image/x-icon "access plus 1 year"
+
+# Standardwert für nicht explizit definierte Dateitypen
 ExpiresDefault "access plus 2 days"
 
+
+# HTML nicht langfristig cachen.
+# Der Browser darf die Datei zwischenspeichern, muss aber
+# vor der Verwendung prüfen, ob eine aktuelle Version vorliegt.
+<IfModule mod_headers.c>
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache"
+    </FilesMatch>
+</IfModule>
+
+
+# ============================================================
+# Compression
+# ============================================================
+
 <IfModule mod_deflate.c>
-AddOutputFilterByType DEFLATE text/plain
-AddOutputFilterByType DEFLATE text/html
-AddOutputFilterByType DEFLATE text/xml
-AddOutputFilterByType DEFLATE text/shtml
-AddOutputFilterByType DEFLATE text/css
-AddOutputFilterByType DEFLATE application/xml
-AddOutputFilterByType DEFLATE application/xhtml+xml
-AddOutputFilterByType DEFLATE application/rss+xml
-AddOutputFilterByType DEFLATE application/javascript
-AddOutputFilterByType DEFLATE application/x-javascript
-</IfModule> 
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/shtml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
