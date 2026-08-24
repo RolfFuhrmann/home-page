@@ -36,22 +36,22 @@
 
 <body>
 
-    <!-- /.navbar -->
-    <nav id="mainbar" class="navbar is-family-monospace" aria-label="navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
-                <img src="images/logo.gif" alt="Logo der Website" width="60" height="60">
-                <p class="navbar-item content is-size-4-mobile is-size-4-tablet has-text-centered">
-                    <strong>ROLF FUHRMANN</strong>
-                </p>
-            </a>
-
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
+        <!-- /.navbar -->
+        <nav id="mainbar" class="navbar is-family-monospace" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                  <img src="images/logo.gif" alt="Logo der Website" width="60" height="60">
+                    <p class="navbar-item content is-size-4-mobile is-size-4-tablet has-text-centered">
+                        <strong>ROLF FUHRMANN</strong>
+                    </p>
+                </a>
+  
+                 <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
 
         <div id="navMenu" class="navbar-menu">
             <div class="navbar-end is-size-5">
@@ -75,41 +75,33 @@
     </nav>
     <!-- /.navbar -->
 
-    <!-- /.hero Landing-->
-    <!-- data-theme="dark" sorgt dafür, dass Bulma v1.x diesen Bereich intern als 'Dunkel' behandelt -->
-    <section class="hero is-family-monospace" data-theme="dark" role="main" aria-label="main">
-        <div class="hero-body">
-            <div class="container">
-                <div class="columns">
-                    <div class="column is-three-fifths content mt-6">
-                        <!-- Durch das obere data-theme bleiben title und Text hier garantiert weiß -->
-                        <h1 class="title has-text-white is-size-2-tablet">
-                            Kompetenz in der<br>
-                            Fullstack Webentwicklung
-                        </h1>
-                        <p class="has-text-white is-size-5-tablet">
-                            Seit 2005 finde ich für meine Kunden kreative Lösungen in der Entwicklung von Frontend- und
-                            Backend-Software.
-                            Durch meine jahrelange Erfahrung habe ich ein erprobtes Gefühl für herausragende
-                            Softwarequalität und arbeite
-                            mit den aktuellsten Technologien. Meine Neugierde an neuen technischen Entwicklungen und
-                            mein hohes persönliches
-                            Engagement zeichnen mich und meine Arbeit aus.
-                        </p>
-                    </div>
+        <!-- /.hero Landing-->
+       <section class="hero is-family-monospace">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column is-three-fifths content mt-6">
+                            <h1 class="title has-text-white is-size-2-tablet">
+                                Kompetenz in der</br>
+                                Fullstack Webentwicklung
+                            </h1>
+                            <p class="has-text-white is-size-5-tablet">
+                                Seit 2005 finde ich für meine Kunden kreative Lösungen in der Entwicklung von Frontend- und Backend-Software. 
+                                Durch meine jahrelange Erfahrung habe ich ein erprobtes Gefühl für herausragende Softwarequalität und arbeite 
+                                mit den aktuellsten Technologien. Meine Neugierde an neuen technischen Entwicklungen und mein hohes persönliches 
+                                Engagement zeichnen mich und meine Arbeit aus.
+                            </p> 
+                        </div>
+                    </div>        
                 </div>
             </div>
-        </div>
-    </section>
+        </section>        
+        <!-- /.hero Landing-->
 
-    <!-- /.hero Landing-->
-
-    <!-- /.section Kompetenzen-->
-    <section id="kompetenzen" class="section container is-fluid mt-6" aria-label="Kompetenzen">
-        <h2 class="title is-family-monospace has-text-primary">Kompetenzen</h2>
-
-        <!-- Das verlässliche Columns-System mit Multiline-Support -->
-        <div class="columns is-multiline content">
+        <!-- /.section Kompetenzen-->
+        <section id="kompetenzen" class="section container is-fluid mt-6">
+            <h2 class="title is-family-monospace has-text-primary">Kompetenzen</h2>
+            <div class="tile is-ancestor content">
 
             <!-- Kachel 1: Frontend (is-12 auf Tablet/Mobile, is-6 erst ab Desktop) -->
             <div class="column is-12-tablet is-6-desktop is-flex">
@@ -229,162 +221,39 @@
                     class="box is-shadowless has-background-white-ter is-flex is-flex-direction-column is-justify-content-space-between w-100">
                     <div>
                         <h2 class="title is-4 is-family-monospace">Agilität</h2>
-                        <p>Aktive Mitarbeit an <strong>Refinement, Planing und Retro</strong> der Sprints</p>
-                        <p>Teamarbeit mit <strong>Pair Programming und Codereview</strong></p>
-                    </div>
-                    <div>
-                        <a class="has-text-primary is-flex is-justify-content-space-between mt-4" href="#agility"
-                            data-action="collapse">
-                            <strong>Tools & Technologien</strong>
-                            <span class="icon is-medium"><i
-                                    class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
-                        </a>
-                        <div id="agility" class="is-collapsible">
-                            <div class="tags mt-2">
-                                <span class="tag is-primary">Jira</span>
-                                <span class="tag is-primary">GitLab</span>
+                            <p>Aktive Mitarbeit an <strong>Refinement, Planing und Retro der Sprints</strong> der Sprints</p>
+                            <p>Teamarbeit mit <strong>Pair Programming und Codereview</strong></p>
+
+                            <a  class="has-text-primary is-flex is-justify-content-space-between" href="#agility" data-action="collapse"><strong>Tools & Technologien</strong>
+                                <span class="is-pulled-right icon is-medium"><i class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
+                            </a>
+                            <div id="agility" class="is-collapsible">
+                                <div class="tags mt-2">
+                                    <span class="tag is-primary">Jira</span>
+                                </div>
                             </div>
-                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- /.section Kompetenzen-->
+
+        <!-- /.section Portfolio-->
+        <section class="section container is-fluid" id="portfolio">
+            <h2 class="title is-family-monospace has-text-primary">Portfolio</h2>
+            <div class="box is-shadowless has-background-white-ter content">   
+                <div class="columns portfolio">
+                    <div class="column is-7">
+                        <p class="title is-4 is-family-monospace">
+                            Content Managment (Behörde Nürnberg)
+                        </p>
                     </div>
-                </article>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- /.section Kompetenzen-->
-
-    <!-- /.section Portfolio-->
-    <section class="section container is-fluid" id="portfolio" aria-label="Portfolio">
-        <h2 class="title is-family-monospace has-text-primary">Portfolio</h2>
-
-        <!-- Ehrenämter -->
-        <div class="box is-shadowless has-background-white-ter content">
-            <div class="columns portfolio">
-                <div class="column is-7">
-                    <p class="title is-4 is-family-monospace">
-                        Ehrenämter im Ruhestand
-                    </p>
+                    <div class="column is-5 has-text-right">
+                        <a class="title is-4 is-family-monospace pr-3" href="#ba072019" data-action="collapse">07.2019 - bis heute
+                            <span class="is-pulled-right icon is-medium"><i class="mdi mdi-36px mdi-chevron-up has-text-primary"></i></span>
+                        </a>
+                    </div>
                 </div>
-                <div class="column is-5 has-text-right">
-                    <a class="title is-4 is-family-monospace pr-3" href="#da012024" data-action="collapse">01.2024 -
-                        bis heute
-                        <span class="is-pulled-right icon is-medium"><i
-                                class="mdi mdi-36px mdi-chevron-up has-text-primary"></i></span>
-                    </a>
-                </div>
-            </div>
-
-            <div id="da012024" class="is-collapsible portfolio-content is-active">
-                <p class="title is-5">Seit Beginn meines Ruhestands bringe ich meine beruflichen Fähigkeiten gezielt in
-                    ehrenamtliche Tätigkeiten ein – sei es durch IT-Kompetenz bei der Webentwicklung und digitalen
-                    Beratung oder durch analytisches und selbständiges Arbeiten bei der rechtlichen Betreuung.</p>
-                <ul>
-                    <li>Übernahme der rechtlichen Betreuung von hilfsbedürftigen Personen im Rahmen des Betreuungsrechts
-                    </li>
-                    <li>Konzeption und Umsetzung einer modernen Webpräsenz für den SV Poppenreuth Fürth</li>
-                    <li>Unterstützung älterer Bürgerinnen und Bürger bei der Nutzung digitaler Alltagsanwendungen im
-                        Mütterzentrum Fürth</li>
-                </ul>
-                <p><strong>Erfahrungen:</strong></p>
-                <div class="tags">
-                    <span class="tag is-primary">Betreuungsrecht</span>
-                    <span class="tag is-primary">Ehrenamtliche Beratung</span>
-                    <span class="tag is-primary">Barrierefreie Webentwicklung</span>
-                    <span class="tag is-primary">Digitale Inklusion</span>
-                    <span class="tag is-primary">Seniorenarbeit</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scheduling -->
-        <div class="box is-shadowless has-background-white-ter content">
-            <div class="columns portfolio">
-                <div class="column is-7">
-                    <p class="title is-4 is-family-monospace">
-                        Scheduling System (Finanzen Nürnberg)
-                    </p>
-                </div>
-                <div class="column is-5 has-text-right">
-                    <a class="title is-4 is-family-monospace pr-3" href="#da062022" data-action="collapse">06.2022 -
-                        11.2023
-                        <span class="is-pulled-right icon is-medium"><i
-                                class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
-                    </a>
-                </div>
-            </div>
-
-            <div id="da062022" class="is-collapsible portfolio-content">
-                <p class="title is-5">Mitarbeit bei der Erstellung eines Scheduling System mit agiler Vorgehensweise in
-                    einem interdisziplinär besetzten Team mit den Aufgaben</p>
-                <ul>
-                    <li>Entwicklung von Angular UI Komponenten mit Unittests</li>
-                    <li>Entwicklung von Spring Boot Microservices mit Unit-, Integrations test</li>
-                    <li>Entwicklung im Pair Programming und Durchführung von Code Reviews</li>
-                    <li>Fehleranalyse/-behebung und DevOps Aufgaben</li>
-                </ul>
-                <p><strong>Erfahrungen:</strong></p>
-                <div class="tags">
-                    <span class="tag is-primary">IntelliJ</span>
-                    <span class="tag is-primary">Angular 16 + Material/TypeScript/RxJS</span>
-                    <span class="tag is-primary">Java 17</span>
-                    <span class="tag is-primary">RXJava</span>
-                    <span class="tag is-primary">Spring Boot 3</span>
-                    <span class="tag is-primary">TailwindCSS</span>
-                    <span class="tag is-primary">Node.js</span>
-                    <span class="tag is-primary">Jest</span>
-                    <span class="tag is-primary">Cloud Foundry</span>
-                    <span class="tag is-primary">Splunk</span>
-                    <span class="tag is-primary">Git</span>
-                    <span class="tag is-primary">GitLab</span>
-                    <span class="tag is-primary">npm</span>
-                    <span class="tag is-primary">Maven</span>
-                    <span class="tag is-primary">Jenkins</span>
-                    <span class="tag is-primary">SonarQube</span>
-                    <span class="tag is-primary">Confluence</span>
-                    <span class="tag is-primary">Windows</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="box is-shadowless has-background-white-ter content">
-            <div class="columns portfolio">
-                <div class="column is-7">
-                    <p class="title is-4 is-family-monospace">
-                        Sabbatical
-                    </p>
-                </div>
-                <div class="column is-5 has-text-right">
-                    <a class="title is-4 is-family-monospace pr-3" href="#sa052021" data-action="collapse">05.2021 -
-                        05.2022
-                        <span class="is-pulled-right icon is-medium"><i
-                                class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
-                    </a>
-                </div>
-            </div>
-
-            <div id="sa052021" class="is-collapsible portfolio-content">
-                <p class="title is-5">Reise durch Europa</p>
-                <a class="has-text-primary" href="https://wo-ist-panama.de" target="_blank"><strong>Hier
-                        geht's zum Reisetagebuch</strong></a>
-            </div>
-        </div>
-
-        <div class="box is-shadowless has-background-white-ter content">
-            <div class="columns portfolio">
-                <div class="column is-7">
-                    <p class="title is-4 is-family-monospace">
-                        Content Managment (Behörde Nürnberg)
-                    </p>
-                </div>
-                <div class="column is-5 has-text-right">
-                    <a class="title is-4 is-family-monospace pr-3" href="#ba072019" data-action="collapse">07.2019 -
-                        04.2021
-                        <span class="is-pulled-right icon is-medium"><i
-                                class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
-                    </a>
-                </div>
-            </div>
 
             <div id="ba072019" class="is-collapsible portfolio-content">
                 <p class="title is-5">Mitarbeit bei der Erstellung von Portalbausteinen mit agiler Vorgehensweise in
@@ -1014,159 +883,149 @@
     </section>
     <!-- /.section Portfolio-->
 
-    <!-- /.section Über Mich-->
-    <section class="section container is-fluid" id="ueber-mich" aria-label="Über mich">
-        <h2 class="title is-family-monospace has-text-primary">Über Mich</h2>
-        <article class="content is-size-5">
-            <img class="is-pulled-right ml-4 is-size-5-mobile" src="images/rolf-fuhrmann-23.jpg" width="210"
-                height="279" alt="Bild von Rolf Fuhrmann">
+        <!-- /.section Über Mich-->
+        <section class="section container is-fluid" id="ueber-mich">
+            <h2 class="title is-family-monospace has-text-primary">Über Mich</h2>
+                <article class="content is-size-5">
+                        <img class="is-pulled-right ml-4 is-size-5-mobile" src="images/rolf-fuhrmann.webp"  width="210" height="279" alt="Bild von Rolf Fuhrmann">
 
-            <p>Seit meinem Informatikstudium 1986 an der Akademie für Datenverarbeitung sammele ich kontinuierlich
-                branchenübergreifende
-                Erfahrungen in der Softwareentwicklung, Anwendungsbetreuung und der Systemadministration für
-                IT-Dienstleister, Industrie, Banken,
-                Druckerei / Verlagswesen, Nahrungsmittel, Versandhandel und Automotive.</p>
+                            <p>Seit meinem Informatikstudium 1986 an der Akademie für Datenverarbeitung sammele ich kontinuierlich branchenübergreifende 
+                                Erfahrungen in der Softwareentwicklung, Anwendungsbetreuung und der Systemadministration bei IT-Dienstleister, Industrie, Banken, 
+                                Druckerei / Verlagswesen, Nahrungsmittel, Versandhandel und Automotive.</p>
+                         
+                            <p>Dabei unterstütze ich meine Kunden kompetent in allen Stufen des Softwareentwicklungsprozesses. Durch enge
+                                Abstimmung mit den Fachbereichen erstelle ich passgenaue Entwürfe und führe die Realisierung durch. Aufgrund meiner langjährigen und vielfältigen Erfahrung verfüge ich über fundiertes 
+                                Fachwissen und stelle dadurch nicht nur eine hohe Qualität der entwickelten Software sicher, sondern bringe diese 
+                                auch verantwortungsvoll zum Einsatz.</p>
+                        
+                            <p>Mein Arbeitsstil ist zielorientiert. Er ist geprägt durch Teamfähigkeit und Kommunikationsstärke. Dabei sind für mich 
+                                Zuverlässigkeit und selbstständiges Arbeiten ebenso selbstverständlich wie Flexibilität und eine hohe Belastbarkeit. 
+                                Auch in schwierigen Situationen behalte ich einen kühlen Kopf. Ich bin jederzeit motiviert, mich in neue 
+                                Aufgabenstellungen rasch und sicher einzuarbeiten und habe einen hohen Grad an Lernbereitschaft.</p>
+                        
+                            <p>Durch mein hohes Interesse an neuen Entwicklungen in der IT-Branche und damit einhergehender kontinuierlicher 
+                                Weiterbildung sowie meiner autodidaktischen Lernfähigkeit bleibe ich auf der Höhe der Zeit und freue mich auf neue 
+                                Herausforderungen – gemeinsam mit Ihnen.</p>
+                </article>
+        </section>
+        <!-- /.section Über Mich-->
 
-            <p>Dabei unterstütze ich meine Kunden kompetent in allen Stufen des Softwareentwicklungsprozesses. Durch
-                enge
-                Abstimmung mit den Fachbereichen erstelle ich passgenaue Entwürfe und führe die Realisierung durch.
-                Aufgrund meiner langjährigen und vielfältigen Erfahrung verfüge ich über fundiertes
-                Fachwissen und stelle dadurch nicht nur eine hohe Qualität der entwickelten Software sicher, sondern
-                bringe diese
-                auch verantwortungsvoll zum Einsatz.</p>
-
-            <p>Mein Arbeitsstil ist zielorientiert. Er ist geprägt durch Teamfähigkeit und Kommunikationsstärke. Dabei
-                sind für mich
-                Zuverlässigkeit und selbstständiges Arbeiten ebenso selbstverständlich wie Flexibilität und eine hohe
-                Belastbarkeit.
-                Auch in schwierigen Situationen behalte ich einen kühlen Kopf. Ich bin jederzeit motiviert, mich in neue
-                Aufgabenstellungen rasch und sicher einzuarbeiten und habe einen hohen Grad an Lernbereitschaft.</p>
-
-            <p>Durch mein hohes Interesse an neuen Entwicklungen in der IT-Branche und damit einhergehender
-                kontinuierlicher
-                Weiterbildung sowie meiner autodidaktischen Lernfähigkeit bleibe ich auf der Höhe der Zeit und freue
-                mich auf neue
-                Herausforderungen – gemeinsam mit Ihnen.</p>
-        </article>
-    </section>
-    <!-- /.section Über Mich-->
-
-    <!-- /.section Kontakt-->
-    <section class="section container is-fluid is-hidden-tablet" id="kontakt" aria-label="Kontaktinformnationen">
-
-        <h2 class="title is-family-monospace has-text-primary">Kontakt</h2>
-        <div class="tile is-ancestor is-size-5">
-            <div class="tile is-parent">
-                <address>
-                    Rolf Fuhrmann
-                    <br />
-                    Kutzerstr. 105c
-                    <br /><br />
-                    90765 Fürth
-                </address>
-            </div>
-            <div class="tile is-parent">
-                <div>
-                    <span class="icon"><i class="mdi mdi-phone mdi-dark"></i></span>&nbsp;+49.911.89295634
-                    <br />
-                    <span class="icon"><i class="mdi mdi-fax mdi-dark"></i></span>&nbsp;+49.911.38445168
-                    <br />
-                    <span class="icon"><i class="mdi mdi-cellphone-android mdi-dark"></i></span>&nbsp;+49.179.5032935
-                    <br />
-                    <span class="icon"><i class="mdi mdi-email mdi-dark"></i></span>&nbsp;<img src="images/mail.jpg"
-                        width="163" height="14" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /.section Kontakt-->
-
-    <!-- /.section Info-->
-    <section class="section container is-fluid is-hidden-tablet" id="info" aria-label="Allgemeine Informationen">
-        <div>
-            <h2 class="title is-family-monospace has-text-primary">Info</h2>
-            <p class="is-size-5">Ich blicke auf eine spannende berufliche Zeit zurück und bin auch im Ruhestand
-                weiterhin aktiv – nicht mehr in IT-Projekten, aber als ehrenamtlicher Wegbegleiter dort, wo IT-Kompetenz
-                und analytisches Denken gebraucht werden.</p>
-        </div>
-    </section>
-    <!-- /.section Info-->
-
-    <footer class="footer content has-text-centered">
-        <div class="level is-size-7">
-            <div class="level-item has-text-centered">
-                <span class="icon"><i class="mdi mdi-copyright mdi-dark"></i></span>
-                2026 Rolf Fuhrmann
-            </div>
-            <div class="level-item has-text-centered">
-                <div class="level">
-                    <div class="level-item has-text-centered">
-                        <a id="impressum-link" class="navbar-item" href="impressum.html">Impressum</a>
+        <!-- /.section Kontakt--> 
+        <section class="section container is-fluid" id="kontakt">
+ 
+                <h2 class="title is-family-monospace has-text-primary">Kontakt</h2>
+                <div class="tile is-ancestor is-size-5">
+                    <div class="tile is-parent">
+                        <address>
+                            Rolf Fuhrmann
+                            <br/>
+                            Kutzerstr. 105c
+                            <br/><br/>
+                            90765 Fürth
+                        </address>
                     </div>
-
-                    <div class="level-item has-text-centered">
-                        <a class="navbar-item" href="datenschutz.html">Datenschutz</a>
+                    <div class="tile is-parent">
+                        <div>
+                            <span class="icon"><i class="mdi mdi-phone mdi-dark"></i></span>&nbsp;+49.911.89295634
+                            <br/>
+                            <span class="icon"><i class="mdi mdi-fax mdi-dark"></i></span>&nbsp;+49.911.38445168
+                            <br/>
+                            <span class="icon"><i class="mdi mdi-cellphone-android mdi-dark"></i></span>&nbsp;+49.179.5032935
+                            <br/>
+                            <span class="icon"><i class="mdi mdi-email mdi-dark"></i></span>&nbsp;<img src="images/mail.jpg" width="163" height="14" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+        
+        </section>
+        <!-- /.section Kontakt-->
 
-    </footer>
+        <!-- /.section Info--> 
+        <section class="section container is-fluid" id="info">
+            <div>
+                <h2 class="title is-family-monospace has-text-primary">Info</h2>
+                <p class="is-size-5">Frei für neue Projekt ab 1. Mai 2021</p>
+            </div>
+        </section>
+        <!-- /.section Info-->
 
-    <div id="scrollToTop" class="container fixed-button-bar" style="display: none;" role="navigation"
-        aria-label="Nach oben springen">
-        <div class="content">
-            <div class="is-hidden-mobile buttons is-pulled-right">
-                <button class="button has-text-primary" style="border-color: #1f7d5e;" onclick="scrollToTop()"
-                    title="Nach oben springen">
-                    <strong>nach oben</strong>
-                    <span class="icon is-medium"><i class="mdi mdi-36px mdi-chevron-up has-text-primary"></i></span>
-                </button>
-            </div>
-            <div class="is-hidden-tablet buttons is-centered">
-                <button class="button has-text-primary" style="border-radius: 100%; border-color: #1f7d5e;"
-                    onclick="scrollToTop()">
-                    <span class="icon is-medium"><i class="mdi mdi-36px mdi-chevron-up has-text-primary"></i></span>
-                </button>
-            </div>
-        </div>
-    </div>
+        <footer class="footer content has-text-centered">
+            <div class="level is-size-7">
+                <div class="level-item has-text-centered">
+                    <span class="icon"><i class="mdi mdi-copyright mdi-dark"></i></span>
+                    2020 Rolf Fuhrmann 
+                </div>
+                <div class="level-item has-text-centered">
+                    <div class="level">
+                        <div class="level-item has-text-centered">
+                            <a id="impressum-link" class="navbar-item" href="impressum.html">Impressum</a>
+                        </div>
+    
+                        <div class="level-item has-text-centered">
+                            <a class="navbar-item" href="datenschutz.html">Datenschutz</a>
+                        </div>
+                    </div>
 
-    <div class="is-hidden-mobile fixed-side-bar" role="navigation" aria-label="Informationsbuttons">
-        <div class="is-pulled-right">
-            <div id="kontaktButton" class="side-bar-icon open">
-                <span class="icon is-medium" style="display: contents;">
-                    <i class="mdi mdi-36px mdi-contacts-outline has-text-primary">Kontakt</i>
-                </span>
-            </div>
-            <div id="infoButton" class="side-bar-icon open">
-                <span class="icon is-medium" style="display: contents;">
-                    <i class="mdi mdi-36px mdi-information-outline has-text-primary">Info</i>
-                </span>
-            </div>
-        </div>
-        <div id="kontaktContent" class="side-bar-content is-family-monospace active is-hidden">
-            <div class="box content">
-                <h2 class="title is-4 is-centered has-text-primary">Kontakt</h2>
-                <address>
-                    Rolf Fuhrmann
-                    <br />
-                    Kutzerstr. 105c
-                    <br /><br />
-                    90765 Fürth
-                </address>
-                <br>
-                <div>
-                    <span class="icon"><i class="mdi mdi-phone mdi-dark"></i></span>&nbsp;+49.911.89295634
-                    <br />
-                    <span class="icon"><i class="mdi mdi-fax mdi-dark"></i></span>&nbsp;+49.911.38445168
-                    <br />
-                    <span class="icon"><i class="mdi mdi-cellphone-android mdi-dark"></i></span>&nbsp;+49.179.5032935
-                    <br />
-                    <span class="icon"><i class="mdi mdi-email mdi-dark"></i></span>&nbsp;<img src="images/mail.jpg"
-                        width="163" height="14" alt="">
+
+                </div>
+                <div class="level-item has-text-centered">
+                    <p>Zuletzt aktualisiert am 24.12.2020</p>
+
                 </div>
             </div>
+ 
+        </footer>
+
+        <div id="scrollToTop" class="container fixed-button-bar" style="display: none;">
+            <div class="content">
+                <div class="is-hidden-mobile buttons is-pulled-right">
+                   <button class="button has-text-primary" style="border-color: #1f7d5e;" onclick="scrollToTop()" >
+                        <strong>nach oben</strong>
+                        <span class="icon is-medium"><i class="mdi mdi-36px mdi-chevron-up has-text-primary"></i></span>
+                    </button>
+                </div>
+                <div class="is-hidden-tablet buttons is-centered">
+                    <button class="button has-text-primary" style="border-radius: 100%; border-color: #1f7d5e;" onclick="scrollToTop()" >
+                        <span class="icon is-medium"><i class="mdi mdi-36px mdi-chevron-up has-text-primary"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="is-hidden-mobile fixed-side-bar">
+            <div class="is-pulled-right">
+                <div id="kontaktButton" class="side-bar-icon open">
+                    <span class="icon is-medium" style="display: contents;">
+                        <i class="mdi mdi-36px mdi-contacts-outline has-text-primary">Kontakt</i>
+                    </span>
+                </div>
+                <div id="infoButton" class="side-bar-icon open">
+                    <span class="icon is-medium" style="display: contents;">
+                        <i class="mdi mdi-36px mdi-information-outline has-text-primary">Info</i>
+                    </span>
+                </div>
+            </div>
+            <div id="kontaktContent" class="side-bar-content is-family-monospace active is-hidden">
+                <div class="box content">
+                    <h2 class="title is-4 is-centered has-text-primary">Kontakt</h2>
+                    <address>
+                        Rolf Fuhrmann
+                        <br/>
+                        Kutzerstr. 105c
+                        <br/><br/>
+                        90765 Fürth
+                    </address>
+                    <br>
+                    <div>
+                        <span class="icon"><i class="mdi mdi-phone mdi-dark"></i></span>&nbsp;+49.911.89295634
+                        <br/>
+                        <span class="icon"><i class="mdi mdi-fax mdi-dark"></i></span>&nbsp;+49.911.38445168
+                        <br/>
+                        <span class="icon"><i class="mdi mdi-cellphone-android mdi-dark"></i></span>&nbsp;+49.179.5032935
+                        <br/>
+                        <span class="icon"><i class="mdi mdi-email mdi-dark"></i></span>&nbsp;<img src="images/mail.jpg" width="163" height="14" alt="">
+                    </div>
+                </div>
 
         </div>
         <div id="infoContent" class="side-bar-content is-family-monospace active is-hidden">
