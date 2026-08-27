@@ -5,7 +5,7 @@ p {
 }
 
 .hero {
-  background-image: url("./../../Images/work-together-5.jpg") !important;
+  background-image: url("./../../images/work-together-5.jpg") !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
   background-size: cover !important;
