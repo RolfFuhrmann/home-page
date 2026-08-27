@@ -20,7 +20,7 @@ Die Webseite wurde im Zuge einer Modernisierung vollständig auf den neuesten St
 
 Das Herzstück meiner aktuellen Arbeit ist die **Stock Analysis Plattform**, eine komplexe und containerisierte Enterprise-Anwendung. Ich verbinde darin modernste Microservice-Architekturen mit datengetriebenem Machine Learning.
 
-👉 **[Hier geht es direkt zum Source-Code des Börsenprojekts](https://github.com)**
+👉 **[Hier geht es direkt zum Source-Code des Börsenprojekts](https://github.com/RolfFuhrmann/Stock-Analyse)**
 
 ### Core-Highlights des Projekts:
 
