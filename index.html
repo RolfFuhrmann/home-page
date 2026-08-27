@@ -32,21 +32,33 @@
     <link rel="apple-touch-icon" href="icons/apple-touch-icon-180.png">
     <link rel="manifest" href="manifest.json">
 
+    <!-- Lädt die modernen Schriftarten Inter und JetBrains Mono von Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link
+        href="https://googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap"
+        rel="stylesheet">
+
+
 </head>
 
 <body>
 
     <!-- /.navbar -->
-    <nav id="mainbar" class="navbar is-family-monospace" aria-label="navigation">
+    <!-- py-2 sorgt für ein angenehmes vertikales Padding; px-5 für Seitenabstand -->
+    <nav id="mainbar" class="navbar is-family-monospace py-2 px-5" aria-label="navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="index.html">
-                <img src="images/logo.gif" alt="Logo der Website" width="60" height="60">
-                <p class="navbar-item content is-size-4-mobile is-size-4-tablet has-text-centered">
-                    <strong>ROLF FUHRMANN</strong>
+                <!-- Größe auf 40 reduziert, Klasse 'navbar-logo' für das CSS hinzugefügt -->
+                <img src="images/logo.gif" alt="Logo der Website" width="40" height="40" class="navbar-logo mr-3">
+                <p class="is-size-4-mobile is-size-4-tablet has-text-weight-bold tracking-wide">
+                    ROLF FUHRMANN
                 </p>
             </a>
 
+            <!-- Bulma v1.x benötigt nun vier <span>-Elemente für den Burger-Button -->
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+                <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -55,54 +67,48 @@
 
         <div id="navMenu" class="navbar-menu">
             <div class="navbar-end is-size-5">
-                <a class="navbar-item" href="#kompetenzen">
-                    <strong>Kompetenzen</strong>
-                </a>
-                <a class="navbar-item" href="#portfolio">
-                    <strong>Portfolio</strong>
-                </a>
-                <a class="navbar-item" href="#ueber-mich">
-                    <strong>Über Mich</strong>
-                </a>
-                <a class="navbar-item is-hidden-tablet" href="#kontakt">
-                    <strong>Kontakt</strong>
-                </a>
-                <a class="navbar-item is-hidden-tablet" href="#info">
-                    <strong>Info</strong>
-                </a>
+                <!-- Die Links erhalten eine eigene Klasse .nav-link für moderne CSS-Effekte -->
+                <a class="navbar-item nav-link" href="#kompetenzen">Kompetenzen</a>
+                <a class="navbar-item nav-link" href="#portfolio">Portfolio</a>
+                <a class="navbar-item nav-link" href="#ueber-mich">Über Mich</a>
+                <a class="navbar-item nav-link is-hidden-tablet" href="#kontakt">Kontakt</a>
+                <a class="navbar-item nav-link is-hidden-tablet" href="#info">Info</a>
             </div>
         </div>
     </nav>
     <!-- /.navbar -->
 
     <!-- /.hero Landing-->
-    <!-- data-theme="dark" sorgt dafür, dass Bulma v1.x diesen Bereich intern als 'Dunkel' behandelt -->
-    <section class="hero is-family-monospace" data-theme="dark" role="main" aria-label="main">
+    <section class="hero is-family-monospace has-text-white" data-theme="dark" role="main" aria-label="main">
         <div class="hero-body">
             <div class="container">
                 <div class="columns">
                     <div class="column is-three-fifths content mt-6">
-                        <!-- Durch das obere data-theme bleiben title und Text hier garantiert weiß -->
                         <h1 class="title has-text-white is-size-2-tablet">
-                            Kompetenz in der<br>
-                            Fullstack Webentwicklung
+                            Erfahrung trifft Innovation:<br>
+                            Fullstack-Webentwicklung & KI
                         </h1>
-                        <p class="has-text-white is-size-5-tablet">
-                            Seit 2005 finde ich für meine Kunden kreative Lösungen in der Entwicklung von Frontend- und
-                            Backend-Software.
-                            Durch meine jahrelange Erfahrung habe ich ein erprobtes Gefühl für herausragende
-                            Softwarequalität und arbeite
-                            mit den aktuellsten Technologien. Meine Neugierde an neuen technischen Entwicklungen und
-                            mein hohes persönliches
-                            Engagement zeichnen mich und meine Arbeit aus.
+                        <p class="has-text-white is-size-5-tablet mb-5">
+                            Ich verbinde jahrzehntelange fundierte Software-Expertise in Enterprise-Umgebungen
+                            mit dem aktiven, praktischen Einsatz modernster Technologien wie KI-gestützter Entwicklung
+                            und Machine Learning. Mein Fokus liegt auf messbarer Softwarequalität, Neugierde und
+                            hohem persönlichem Engagement. Ich unterstütze Unternehmen agil und zielgerichtet
+                            dabei, komplexe Softwareprojekte erfolgreich zu realisieren.
                         </p>
+
+                        <div class="pt-2">
+                            <a href="#aktuelles-projekt" class="button hero-cta-button px-5 py-3">
+                                <strong>Aktuelles Projekt ansehen</strong>
+                                <span class="icon ml-2"><i class="mdi mdi-arrow-right"></i></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- /.hero Landing-->
+
 
     <!-- /.section Kompetenzen-->
     <section id="kompetenzen" class="section container is-fluid mt-6" aria-label="Kompetenzen">
@@ -111,10 +117,41 @@
         <!-- Das verlässliche Columns-System mit Multiline-Support -->
         <div class="columns is-multiline content">
 
+            <!-- KI-Box über die volle Breite (is-12) im exakt gleichen Look -->
+            <div class="column is-12">
+                <!-- Wir nutzen dieselben Klassen wie unten: box, is-shadowless, has-background-white-ter -->
+                <article class="box is-shadowless has-background-white-ter p-5 has-accent-border">
+                    <h3 class="title is-4 is-family-monospace mb-3">
+                        KI-gestützte Softwareentwicklung
+                    </h3>
+
+                    <div class="is-size-5">
+                        <p class="mb-3">
+                            Mein hohes Interesse an neuen Entwicklungen in der IT verbinde ich heute mit dem praktischen
+                            Einsatz moderner KI-Werkzeuge in eigenen Softwareprojekten.
+                        </p>
+                        <p class="has-text-muted mb-4">
+                            KI nutze ich als Unterstützung bei Analyse, Architektur, Implementierung, Refactoring und
+                            Weiterentwicklung. Die technischen Entscheidungen und die Verantwortung für das Ergebnis
+                            bleiben bei mir.
+                        </p>
+                    </div>
+
+                    <!-- Die Tags stehen jetzt genau wie bei den anderen Kacheln am Fuß der Box -->
+                    <p class="is-size-6 mb-2"><strong>Fokus & Methoden:</strong></p>
+                    <div class="tags">
+                        <span class="tag is-primary">KI-gestützte Entwicklung</span>
+                        <span class="tag is-primary">Machine Learning</span>
+                        <span class="tag is-primary">XGBoost</span>
+                        <span class="tag is-primary">Codeanalyse</span>
+                    </div>
+                </article>
+            </div>
+
             <!-- Kachel 1: Frontend (is-12 auf Tablet/Mobile, is-6 erst ab Desktop) -->
             <div class="column is-12-tablet is-6-desktop is-flex">
                 <article
-                    class="box is-shadowless has-background-white-ter is-flex is-flex-direction-column is-justify-content-space-between w-100">
+                    class="box is-shadowless has-background-white-ter is-flex is-flex-direction-column is-justify-content-space-between w-100 has-accent-border">
                     <div>
                         <h2 class="title is-4 is-family-monospace">Frontend</h2>
                         <p>Konzeption und Entwicklung von <strong>UI-Komponenten </strong>mit <strong>Angular 16,
@@ -153,7 +190,7 @@
             <!-- Kachel 2: Backend -->
             <div class="column is-12-tablet is-6-desktop is-flex">
                 <article
-                    class="box is-shadowless has-background-white-ter is-flex is-flex-direction-column is-justify-content-space-between w-100">
+                    class="box is-shadowless has-background-white-ter is-flex is-flex-direction-column is-justify-content-space-between w-100 has-accent-border">
                     <div>
                         <h2 class="title is-4 is-family-monospace">Backend</h2>
                         <p>Konzeption und Entwicklung von <strong>Microservices</strong> mit <strong>Springboot 3, Java
@@ -196,7 +233,7 @@
             <!-- Kachel 3: DevOps -->
             <div class="column is-12-tablet is-6-desktop is-flex">
                 <article
-                    class="box is-shadowless has-background-white-ter is-flex is-flex-direction-column is-justify-content-space-between w-100">
+                    class="box is-shadowless has-background-white-ter is-flex is-flex-direction-column is-justify-content-space-between w-100 has-accent-border">
                     <div>
                         <h2 class="title is-4 is-family-monospace">DevOps</h2>
                         <p><strong>Continious Integration</strong></p>
@@ -226,7 +263,7 @@
             <!-- Kachel 4: Agilität -->
             <div class="column is-12-tablet is-6-desktop is-flex">
                 <article
-                    class="box is-shadowless has-background-white-ter is-flex is-flex-direction-column is-justify-content-space-between w-100">
+                    class="box is-shadowless has-background-white-ter is-flex is-flex-direction-column is-justify-content-space-between w-100 has-accent-border">
                     <div>
                         <h2 class="title is-4 is-family-monospace">Agilität</h2>
                         <p>Aktive Mitarbeit an <strong>Refinement, Planing und Retro</strong> der Sprints</p>
@@ -251,15 +288,143 @@
 
         </div>
     </section>
-
     <!-- /.section Kompetenzen-->
+
+    <!-- /.section Aktuelles Projekt-->
+    <section id="aktuelles-projekt" class="section container is-fluid mt-6" aria-label="Aktuelles Projekt">
+        <h2 class="title is-family-monospace has-text-primary mb-5">Aktuelles Projekt</h2>
+
+        <article class="box is-shadowless has-background-white-ter content project-card p-5 has-accent-border">
+
+            <!-- Header: Titel, GitHub-Button und Untertitel -->
+            <div class="columns is-vcentered mb-4">
+                <div class="column is-8-tablet">
+                    <h3 class="title is-3 is-family-monospace mb-1">Stock Analysis Plattform</h3>
+                </div>
+                <div class="column is-4-tablet has-text-right-tablet">
+                    <!-- Prominenter, moderner GitHub-Link -->
+                    <a class="button is-primary is-flex-desktop is-inline-flex"
+                        href="https://github.com/RolfFuhrmann/Stock-Analyse" target="_blank" rel="noopener"
+                        style="background-color: #1f7d5e !important; color: #ffffff !important; border-radius: 8px;">
+                        <span class="icon"><i class="mdi mdi-github"></i></span>
+                        <strong>Code auf GitHub ansehen</strong>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <p class="is-size-5 has-text-weight-medium">
+                    Ein anspruchsvolles Open-Source-Projekt, mit dem ich eine containerisierte Microservice-Architektur,
+                    reaktive Webentwicklung, automatisierte Datenverarbeitung und Machine Learning praktisch im Jahr
+                    2026 verbinde.
+                </p>
+            </div>
+
+            <!-- Akkordeon Trigger-Link -->
+            <a class="has-text-primary is-flex is-justify-content-space-between mt-4" href="#ap2026"
+                data-action="collapse">
+                <strong>MICROSERVICE ARCHITECTURE & INTEGRATION</strong>
+                <span class="icon is-medium"><i class="mdi mdi-36px mdi-chevron-down has-text-primary"></i></span>
+            </a>
+
+            <!-- Sauberer, stabiler Umschlag-Container für das bulma-collapsible Plugin -->
+            <div id="ap2026" class="is-collapsible mt-4">
+                <!-- Zwei-Spalten-Layout für die technische Beschreibung -->
+                <div class="columns is-desktop">
+
+                    <!-- Linke Spalte: Architektur & Logik -->
+                    <div class="column is-7-desktop">
+                        <p class="has-text-weight-bold mb-2">Von der Vision zur lauffähigen, verteilten Cloud-Anwendung.
+                        </p>
+                        <p>
+                            Die Plattform verbindet ein reaktives Angular-Frontend via <strong>Server-Sent Events
+                                (SSE)</strong> mit spezialisierten Backends. Kursdaten werden über <strong>Yahoo
+                                Finance</strong> und <strong>Twelve Data</strong> bezogen. Ein hochgradig optimierter
+                            Agent
+                            steuert die Datenströme, während ein separater ML-Service auf Basis von 38 technischen
+                            Features
+                            ein prädiktives, <strong>XGBoost-basiertes Reversal-Signal</strong> errechnet.
+                        </p>
+                        <p>
+                            Zum Schutz vor Anti-Scraping-Mechanismen läuft das System isoliert hinter einem
+                            <strong>Gluetun
+                                VPN Gateway</strong> mit dynamischer IP-Rotation und TLS-Browser-Fingerprinting. Die
+                            Datenhaltung erfolgt konsistent in einer MySQL-Datenbank mittels automatisierter
+                            <strong>Flyway-Migrationen</strong>. Der gesamte Workflow von der Analyse bis zum
+                            automatisierten wöchentlichen Modell-Retraining wird hocheffizient durch den gezielten
+                            Einsatz
+                            von KI-Werkzeugen unterstützt.
+                        </p>
+
+                        <!-- Rechtlicher Disclaimer am Fuß der Beschreibung -->
+                        <p class="is-size-7 has-text-grey mt-5 style-italic">
+                            <strong>Hinweis:</strong> Das Projekt dient der technischen und analytischen
+                            Auseinandersetzung
+                            mit Börsendaten und stellt keine Anlageberatung dar.
+                        </p>
+                    </div>
+
+                    <!-- Rechte Spalte: System-Komponenten & Architektur-Blöcke -->
+                    <div class="column is-5-desktop pl-5-desktop">
+                        <h4 class="title is-5 is-family-monospace mb-3">Architektur & Datenfluss</h4>
+
+                        <div class="project-architecture-grid">
+                            <div class="arch-block"><strong>Frontend:</strong> Angular Client (SSE & Real-Time UI)</div>
+                            <div class="arch-block"><strong>Processing & Core:</strong> Agent Service (Python &
+                                Java/Spring Boot 4.1 port)</div>
+                            <div class="arch-block"><strong>Data Protection:</strong> Gluetun VPN Gateway & curl_cffi
+                                Browser-Faking</div>
+                            <div class="arch-block"><strong>Intelligence & Prediction:</strong> ML Service (Python,
+                                FastAPI & XGBoost Model)</div>
+                            <div class="arch-block"><strong>Storage & Versioning:</strong> MySQL 9.7 & Flyway Database
+                                Migrations</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Die verwendeten Technologien als Pill-Tags am Boden der Box -->
+                <div class="mt-5">
+                    <p class="is-size-6 mb-2"><strong>Eingesetzte Technologien & Plattformen:</strong></p>
+                    <div class="tags">
+                        <span class="tag is-primary">Angular</span>
+                        <span class="tag is-primary">Java 25 / Spring Boot 4.1</span>
+                        <span class="tag is-primary">Python / FastAPI</span>
+                        <span class="tag is-primary">XGBoost / Machine Learning</span>
+                        <span class="tag is-primary">MySQL / Flyway</span>
+                        <span class="tag is-primary">Docker / Gluetun VPN</span>
+                        <span class="tag is-primary">SSE (Server-Sent Events)</span>
+                        <span class="tag is-primary">GitHub Open Source</span>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <!-- /.section Aktuelles Projekt-->
 
     <!-- /.section Portfolio-->
     <section class="section container is-fluid" id="portfolio" aria-label="Portfolio">
         <h2 class="title is-family-monospace has-text-primary">Portfolio</h2>
 
+        <!-- Portfolio Anker für das aktuelle Projekt -->
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
+            <div class="columns is-vcentered">
+                <div class="column is-8">
+                    <p class="title is-5 is-family-monospace mb-1">
+                        Eigenentwicklung: Stock Analysis Plattform (Open Source)
+                    </p>
+                    <p class="is-size-6 has-text-muted mb-0">
+                        Microservices, Machine Learning und KI-gestützte Fullstack-Entwicklung.
+                    </p>
+                </div>
+                <div class="column is-4 has-text-right-tablet">
+                    <a class="button is-small is-primary is-outlined" href="#aktuelles-projekt">
+                        <strong>Details oben ansehen</strong>
+                    </a>
+                </div>
+            </div>
+        </article>
+
         <!-- Ehrenämter -->
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -267,8 +432,8 @@
                     </p>
                 </div>
                 <div class="column is-5 has-text-right">
-                    <a class="title is-4 is-family-monospace pr-3" href="#da012024" data-action="collapse">01.2024 -
-                        bis heute
+                    <a class="title is-4 is-family-monospace pr-3" href="#da012024" data-action="collapse">01.2024 - bis
+                        heute
                         <span class="is-pulled-right icon is-medium"><i
                                 class="mdi mdi-36px mdi-chevron-up has-text-primary"></i></span>
                     </a>
@@ -295,10 +460,10 @@
                     <span class="tag is-primary">Seniorenarbeit</span>
                 </div>
             </div>
-        </div>
+        </article>
 
         <!-- Scheduling -->
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -345,9 +510,9 @@
                     <span class="tag is-primary">Windows</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -368,9 +533,9 @@
                 <a class="has-text-primary" href="https://wo-ist-panama.de" target="_blank"><strong>Hier
                         geht's zum Reisetagebuch</strong></a>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -419,9 +584,9 @@
                     <span class="tag is-primary">Windows</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -467,9 +632,9 @@
                     <span class="tag is-primary">Windows</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -510,9 +675,9 @@
                     <span class="tag is-primary">Windows</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -547,9 +712,9 @@
                     <span class="tag is-primary">Windows XP</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -583,9 +748,9 @@
                     <span class="tag is-primary">Windows</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -626,9 +791,9 @@
                     <span class="tag is-primary">Windows</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -681,9 +846,9 @@
                     <span class="tag is-primary">Windows</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -724,9 +889,9 @@
                         <span class="tag is-primary">Windows</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -767,9 +932,9 @@
                     <span class="tag is-primary">Windows</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -809,9 +974,9 @@
                     <span class="tag is-primary">Windows XP</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -846,9 +1011,9 @@
                     <span class="tag is-primary">Windows XP</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -884,9 +1049,9 @@
                     <span class="tag is-primary">SAP-IPPE</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -922,9 +1087,9 @@
                     <span class="tag is-primary">Windows XP</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-border">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -963,9 +1128,9 @@
                     <span class="tag is-primary">Windows XP</span>
                 </div>
             </div>
-        </div>
+        </article>
 
-        <div class="box is-shadowless has-background-white-ter content">
+        <article class="box is-shadowless has-background-white-ter content portfolio-card has-accent-borde">
             <div class="columns portfolio">
                 <div class="column is-7">
                     <p class="title is-4 is-family-monospace">
@@ -1010,7 +1175,7 @@
                     <span class="tag is-primary">Windows XP</span>
                 </div>
             </div>
-        </div>
+        </article>
     </section>
     <!-- /.section Portfolio-->
 
@@ -1018,35 +1183,29 @@
     <section class="section container is-fluid" id="ueber-mich" aria-label="Über mich">
         <h2 class="title is-family-monospace has-text-primary">Über Mich</h2>
         <article class="content is-size-5">
-            <img class="is-pulled-right ml-4 is-size-5-mobile" src="images/rolf-fuhrmann-23.jpg" width="210"
-                height="279" alt="Bild von Rolf Fuhrmann">
+            <img class="profile-image mb-4 ml-4-tablet" src="images/rolf-fuhrmann-23.jpg" width="210" height="279"
+                alt="Bild von Rolf Fuhrmann">
 
-            <p>Seit meinem Informatikstudium 1986 an der Akademie für Datenverarbeitung sammele ich kontinuierlich
-                branchenübergreifende
-                Erfahrungen in der Softwareentwicklung, Anwendungsbetreuung und der Systemadministration für
-                IT-Dienstleister, Industrie, Banken,
-                Druckerei / Verlagswesen, Nahrungsmittel, Versandhandel und Automotive.</p>
+            <p>Softwareentwicklung ist für mich nicht nur ein Beruf, sondern eine echte Leidenschaft. Seit meinem
+                Informatikstudium sammele ich kontinuierlich branchenübergreifende Erfahrungen in der Entwicklung
+                komplexer Systeme – für IT-Dienstleister, Industrie, Banken und das Versicherungswesen. Diese tiefe
+                Projekterfahrung ermöglicht es mir, mich extrem schnell in bestehende Architekturen einzufinden und
+                Verantwortung zu übernehmen.</p>
 
-            <p>Dabei unterstütze ich meine Kunden kompetent in allen Stufen des Softwareentwicklungsprozesses. Durch
-                enge
-                Abstimmung mit den Fachbereichen erstelle ich passgenaue Entwürfe und führe die Realisierung durch.
-                Aufgrund meiner langjährigen und vielfältigen Erfahrung verfüge ich über fundiertes
-                Fachwissen und stelle dadurch nicht nur eine hohe Qualität der entwickelten Software sicher, sondern
-                bringe diese
-                auch verantwortungsvoll zum Einsatz.</p>
+            <p><strong>Warum ich heute den Unterschied mache:</strong> Während viele sich auf bewährten Pfaden ausruhen,
+                treibt mich meine Neugierde mitten in die technologische Zukunft. Seit Anfang des Jahres widme ich mich
+                intensiv dem Bau moderner Microservice-Plattformen und der Integration von Machine Learning. Durch den
+                täglichen, praktischen Einsatz von KI-Werkzeugen in meinen aktuellen Open-Source-Projekten auf GitHub
+                habe ich meinen Entwicklungs-Workflow massiv beschleunigt und optimiert.</p>
 
-            <p>Mein Arbeitsstil ist zielorientiert. Er ist geprägt durch Teamfähigkeit und Kommunikationsstärke. Dabei
-                sind für mich
-                Zuverlässigkeit und selbstständiges Arbeiten ebenso selbstverständlich wie Flexibilität und eine hohe
-                Belastbarkeit.
-                Auch in schwierigen Situationen behalte ich einen kühlen Kopf. Ich bin jederzeit motiviert, mich in neue
-                Aufgabenstellungen rasch und sicher einzuarbeiten und habe einen hohen Grad an Lernbereitschaft.</p>
+            <p>Mein Arbeitsstil ist absolut zielorientiert, verlässlich und von hoher Teamfähigkeit geprägt. Ich behalte
+                auch in kritischen Projektphasen einen kühlen Kopf. Gerade in Zeiten, in denen Projekte schnell und
+                präzise realisiert werden müssen, unterstütze ich Unternehmen flexibel und tatkräftig als erfahrener
+                Fullstack-Entwickler.</p>
 
-            <p>Durch mein hohes Interesse an neuen Entwicklungen in der IT-Branche und damit einhergehender
-                kontinuierlicher
-                Weiterbildung sowie meiner autodidaktischen Lernfähigkeit bleibe ich auf der Höhe der Zeit und freue
-                mich auf neue
-                Herausforderungen – gemeinsam mit Ihnen.</p>
+            <p>Ich suche die Zusammenarbeit mit Unternehmen, die diese seltene Kombination aus krisenerprobter
+                Senior-Expertise, hoher Eigenmotivation und modernstem Tech-Know-how wertschätzen. Lassen Sie uns
+                anspruchsvolle Herausforderungen gemeinsam meistern – ich freue mich auf Ihr Projekt.</p>
         </article>
     </section>
     <!-- /.section Über Mich-->
@@ -1093,25 +1252,22 @@
     </section>
     <!-- /.section Info-->
 
-    <footer class="footer content has-text-centered">
-        <div class="level is-size-7">
-            <div class="level-item has-text-centered">
-                <span class="icon"><i class="mdi mdi-copyright mdi-dark"></i></span>
+    <footer class="footer py-5">
+        <div class="footer-inline-container is-size-7">
+            <!-- Links und Copyright auf einer Linie zusammengefasst -->
+            <span class="footer-element">
+                <span class="icon is-small mr-1"><i class="mdi mdi-copyright"></i></span>
                 2026 Rolf Fuhrmann
-            </div>
-            <div class="level-item has-text-centered">
-                <div class="level">
-                    <div class="level-item has-text-centered">
-                        <a id="impressum-link" class="navbar-item" href="impressum.html">Impressum</a>
-                    </div>
+            </span>
 
-                    <div class="level-item has-text-centered">
-                        <a class="navbar-item" href="datenschutz.html">Datenschutz</a>
-                    </div>
-                </div>
-            </div>
+            <span class="footer-divider-dot">•</span>
+
+            <a id="impressum-link" class="footer-link-item" href="impressum.html">Impressum</a>
+
+            <span class="footer-divider-dot">•</span>
+
+            <a class="footer-link-item" href="datenschutz.html">Datenschutz</a>
         </div>
-
     </footer>
 
     <div id="scrollToTop" class="container fixed-button-bar" style="display: none;" role="navigation"
