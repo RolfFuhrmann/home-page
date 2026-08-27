@@ -22082,30 +22082,46 @@ section.hero[data-theme="dark"] {
 #kompetenzen .box.has-accent-border,
 #aktuelles-projekt .box.has-accent-border,
 #portfolio .box.has-accent-border {
-    /* Der linke Akzentbalken steht stabil auf 4px */
+    /* Der linke Akzentbalken steht immer stabil auf 4px */
     border-left: 4px solid #1f7d5e !important; 
     
-    /* Die restlichen drei Seiten erhalten einen hauchdünnen, eleganten Basisrahmen */
+    /* Die restlichen drei Seiten erhalten standardmäßig einen hauchdünnen Basisrahmen */
     border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
     border-right: 1px solid rgba(0, 0, 0, 0.05) !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
     
-    /* Absolut starr (keine Positions- oder Größenänderung beim Hovern) */
+    /* Übergänge für Desktop-Monitore */
     transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
 }
 
-/* Hover-Zustand: Ausnahmslos NUR die Farben der Rahmen verändern */
-#kompetenzen .box.has-accent-border:hover,
-#aktuelles-projekt .box.has-accent-border:hover,
-#portfolio .box.has-accent-border:hover {
-    /* Der linke Balken dunkelt sich ab */
-    border-left-color: #165b44 !important;
-    
-    /* Die anderen 3 Seiten glimmen dezent in deiner Primärfarbe auf */
-    border-top-color: rgba(31, 125, 94, 0.3) !important;
-    border-right-color: rgba(31, 125, 94, 0.3) !important;
-    border-bottom-color: rgba(31, 125, 94, 0.3) !important;
-    
-    /* Der Schatten sorgt für Tiefe, während die Box felsenfest stehen bleibt */
-    box-shadow: 0 8px 24px rgba(31, 125, 94, 0.04) !important;
+/* HOVER-EFFEKT: Gilt nur für Geräte mit echter Maus (Desktop) */
+@media screen and (min-width: 769px) {
+    #kompetenzen .box.has-accent-border:hover,
+    #aktuelles-projekt .box.has-accent-border:hover,
+    #portfolio .box.has-accent-border:hover {
+        /* Der linke Balken dunkelt sich ab */
+        border-left-color: #165b44 !important;
+        
+        /* Die anderen 3 Seiten glimmen dezent in deiner Primärfarbe auf */
+        border-top-color: rgba(31, 125, 94, 0.3) !important;
+        border-right-color: rgba(31, 125, 94, 0.3) !important;
+        border-bottom-color: rgba(31, 125, 94, 0.3) !important;
+        
+        /* Schatten sorgt für Tiefe, während die Box felsenfest stehen bleibt */
+        box-shadow: 0 8px 24px rgba(31, 125, 94, 0.04) !important;
+    }
+}
+
+/* MOBIL-LOOK: Permanenter, edler Rahmen auf Smartphones & Tablets */
+@media screen and (max-width: 768px) {
+    #kompetenzen .box.has-accent-border,
+    #aktuelles-projekt .box.has-accent-border,
+    #portfolio .box.has-accent-border {
+        /* Auf Handys ist die Kontur rundherum permanent leicht grünlich eingefärbt */
+        border-top-color: rgba(31, 125, 94, 0.15) !important;
+        border-right-color: rgba(31, 125, 94, 0.15) !important;
+        border-bottom-color: rgba(31, 125, 94, 0.15) !important;
+        /* Ein leichter Schatten gibt den Karten auf dem Handy direkt Struktur */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+    }
 }
