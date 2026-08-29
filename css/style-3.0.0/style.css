@@ -9,10 +9,18 @@ p {
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
   background-size: cover !important;
+  background-position: center center !important;
   
   /* NEU: Schaltet Bulmas Farbüberlagerungen in v1.x komplett aus */
   background-color: transparent !important;
   --bulma-hero-background-color: transparent !important;
+}
+
+/* Bildausschnitt auf Mobilgeräten etwas nach rechts verschieben */
+@media screen and (max-width: 768px) {
+  .hero {
+    background-position: 70% center !important;
+  }
 }
 
 
@@ -22123,5 +22131,38 @@ section.hero[data-theme="dark"] {
         border-bottom-color: rgba(31, 125, 94, 0.15) !important;
         /* Ein leichter Schatten gibt den Karten auf dem Handy direkt Struktur */
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
+    }
+}
+
+/* --- Fix: Buttons/Tags mit langem Text überlaufen auf schmalen Mobilgeräten --- */
+/* Bulma setzt auf .button und .tag global "white-space: nowrap". Bei langen Texten */
+/* (z.B. "Code auf GitHub ansehen", "Ausführliches Beraterprofil ansehen (PDF)", lange */
+/* Tag-Labels) wird das Element dadurch breiter als der Viewport und erzwingt */
+/* horizontales Scrollen der GESAMTEN Seite. Fix: Auf schmalen Screens Zeilenumbruch */
+/* erlauben, damit sich Buttons/Tags an die verfügbare Breite anpassen. */
+@media screen and (max-width: 480px) {
+    .button {
+        white-space: normal;
+    }
+    .tag {
+        white-space: normal;
+        height: auto;
+        min-height: 2em;
+    }
+    .project-github-button {
+        display: flex !important;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Fix: Bei sehr schmalen Screens (z.B. iPhone SE, 320px) sprengt "ROLF FUHRMANN" */
+/* (is-size-4, fett, tracking-wide, Monospace) zusammen mit Logo die Navbar-Breite, */
+/* wodurch das Burger-Icon rechts aus dem Viewport gedrückt wird. */
+@media screen and (max-width: 380px) {
+    #mainbar .navbar-brand p.is-size-4-mobile {
+        font-size: 1.1rem !important;
+        letter-spacing: 0 !important;
     }
 }

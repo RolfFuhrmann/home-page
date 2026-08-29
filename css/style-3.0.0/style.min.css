@@ -5,14 +5,22 @@ p {
 }
 
 .hero {
-  background-image: url("./../Images/work-together-5.jpg") !important;
+  background-image: url("./../../images/work-together-5.jpg") !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
   background-size: cover !important;
+  background-position: center center !important;
   
   /* NEU: Schaltet Bulmas Farbüberlagerungen in v1.x komplett aus */
   background-color: transparent !important;
   --bulma-hero-background-color: transparent !important;
+}
+
+/* Bildausschnitt auf Mobilgeräten etwas nach rechts verschieben */
+@media screen and (max-width: 768px) {
+  .hero {
+    background-position: 40% center !important;
+  }
 }
 
 
@@ -118,6 +126,17 @@ article .img {
 @charset "UTF-8";
 /*! bulma.io v1.0.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
+:root {
+  /* 1. Die Hauptfarbe für Texte und Hintergründe */
+  --bulma-primary: #1f7d5e !important;
+
+  /* 2. Die Textfarbe, WENN etwas deinen grünen Hintergrund nutzt (z.B. Buttons oder Tags) */
+  --bulma-primary-invert: #ffffff !important;
+
+  /* 3. Die Farbe, die beim Drüberfahren (Hover) mit der Maus angezeigt wird (etwas dunkler) */
+  --bulma-primary-dark: #165b44 !important;
+}
+
 :root {
   --bulma-control-radius: var(--bulma-radius);
   --bulma-control-radius-small: var(--bulma-radius-small);
@@ -22075,7 +22094,7 @@ section.hero[data-theme="dark"] {
 /* 4. Die Überschrift für die "Fokus & Methoden" Tags */
 #kompetenzen .box strong, 
 #kompetenzen .box p strong {
-    font-weight: 600 !important;
+    font-weight: 600 !important;project-card
 }
 
 /* --- Perfekt ausbalancierter Rahmen für alle 3 Haupt-Sektionen --- */
@@ -22125,3 +22144,5 @@ section.hero[data-theme="dark"] {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02) !important;
     }
 }
+@media screen and (max-width:480px){.button{white-space:normal}.tag{white-space:normal;height:auto;min-height:2em}.project-github-button{display:flex !important;width:100%;justify-content:center;text-align:center}}
+@media screen and (max-width:380px){#mainbar .navbar-brand p.is-size-4-mobile{font-size:1.1rem !important;letter-spacing:0 !important}}
